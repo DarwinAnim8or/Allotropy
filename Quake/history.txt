@@ -1,0 +1,19 @@
+map darwin
+ls
+exit
+map darwin
+map test
+map darwin
+exit
+map darwin
+notarget
+god
+notarget
+god
+noclip
+map q1m1
+map demo
+demo1
+map demo13
+help
+map test

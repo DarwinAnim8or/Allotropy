@@ -1,0 +1,1271 @@
+# depslib dependency file v1.0
+1466669012 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/bgmusic.c
+	"quakedef.h"
+	"snd_codec.h"
+	"bgmusic.h"
+
+1467438085 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/quakedef.h
+	"q_stdinc.h"
+	"common.h"
+	"bspfile.h"
+	"sys.h"
+	"zone.h"
+	"mathlib.h"
+	"cvar.h"
+	"protocol.h"
+	"net.h"
+	"cmd.h"
+	"crc.h"
+	"progs.h"
+	"server.h"
+	"platform.h"
+	<SDL2/SDL.h>
+	<SDL2/SDL_opengl.h>
+	<SDL/SDL.h>
+	<SDL/SDL_opengl.h>
+	"SDL.h"
+	"SDL_opengl.h"
+	"console.h"
+	"wad.h"
+	"vid.h"
+	"screen.h"
+	"draw.h"
+	"render.h"
+	"view.h"
+	"sbar.h"
+	"q_sound.h"
+	"client.h"
+	"gl_model.h"
+	"world.h"
+	"image.h"
+	"gl_texmgr.h"
+	"input.h"
+	"keys.h"
+	"menu.h"
+	"cdaudio.h"
+	"glquake.h"
+
+1414760600 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/q_stdinc.h
+	<sys/types.h>
+	<stddef.h>
+	<limits.h>
+	<sys/param.h>
+	"msinttypes/stdint.h"
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+
+1466750848 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/common.h
+	"strl_fn.h"
+
+1324983819 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/strl_fn.h
+
+1466750848 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/bspfile.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/sys.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/zone.h
+
+1454366475 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/mathlib.h
+	<math.h>
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cvar.h
+
+1466750848 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/protocol.h
+
+1427880610 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cmd.h
+
+1266710468 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/crc.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/progs.h
+	"pr_comp.h"
+	"progdefs.h"
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/pr_comp.h
+
+1266710468 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/progdefs.h
+	"progdefs.q1"
+
+1266276415 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/progdefs.q1
+
+1466750848 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/server.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/platform.h
+
+1457863494 /usr/include/SDL/SDL.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1457863494 /usr/include/SDL/SDL_platform.h
+
+1457863494 /usr/include/SDL/begin_code.h
+
+1457863494 /usr/include/SDL/close_code.h
+
+1457863494 /usr/include/SDL/SDL_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_keysym.h
+
+1457863494 /usr/include/SDL/SDL_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1457863494 /usr/include/SDL/SDL_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1457863494 /usr/include/SDL/SDL_opengl.h
+	"SDL_config.h"
+	<windows.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<gl.h>
+	<glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<windows.h>
+	<stddef.h>
+
+1432518483 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/console.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/wad.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/vid.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/screen.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/draw.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/render.h
+
+1455323320 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/view.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/sbar.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/q_sound.h
+
+1466750848 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/client.h
+
+1442779849 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_model.h
+	"modelgen.h"
+	"spritegn.h"
+
+1266710468 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/modelgen.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"cmdlib.h"
+	"scriplib.h"
+	"trilib.h"
+	"lbmlib.h"
+	"mathlib.h"
+
+1266710468 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/spritegn.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"cmdlib.h"
+	"scriplib.h"
+	"dictlib.h"
+	"trilib.h"
+	"lbmlib.h"
+	"mathlib.h"
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/world.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/image.h
+
+1449991384 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_texmgr.h
+
+1456869610 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/input.h
+
+1471801041 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/keys.h
+
+1412793017 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/menu.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cdaudio.h
+
+1466750848 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/glquake.h
+
+1380106872 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_codec.h
+
+1361983825 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/bgmusic.h
+
+1413649981 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cd_sdl.c
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	"cd_null.c"
+	"quakedef.h"
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cd_null.c
+	"quakedef.h"
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cfgfile.c
+	"quakedef.h"
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/chase.c
+	"quakedef.h"
+
+1466754000 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cl_demo.c
+	"quakedef.h"
+
+1466750848 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cl_input.c
+	"quakedef.h"
+
+1463863810 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cl_main.c
+	"quakedef.h"
+	"bgmusic.h"
+
+1466750848 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cl_parse.c
+	"quakedef.h"
+	"bgmusic.h"
+
+1466750848 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cl_tent.c
+	"quakedef.h"
+
+1440323791 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cmd.c
+	"quakedef.h"
+
+1466750848 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/common.c
+	"quakedef.h"
+	"q_ctype.h"
+	<errno.h>
+
+1471951464 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/q_ctype.h
+
+1440323495 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/console.c
+	<sys/types.h>
+	<time.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<io.h>
+	<unistd.h>
+	"quakedef.h"
+
+1266276415 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/crc.c
+	"quakedef.h"
+	"crc.h"
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cvar.c
+	"quakedef.h"
+
+1468988102 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_draw.c
+	"quakedef.h"
+
+1448528802 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_fog.c
+	"quakedef.h"
+
+1442779849 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_mesh.c
+	"quakedef.h"
+
+1461880020 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_model.c
+	"quakedef.h"
+
+1432518483 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_refrag.c
+	"quakedef.h"
+
+1454366475 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_rlight.c
+	"quakedef.h"
+
+1455323320 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_rmain.c
+	"quakedef.h"
+
+1442779849 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_rmisc.c
+	"quakedef.h"
+
+1456869610 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_screen.c
+	"quakedef.h"
+
+1437947485 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_sky.c
+	"quakedef.h"
+
+1461960050 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_texmgr.c
+	"quakedef.h"
+
+1461880032 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_vidsdl.c
+	"quakedef.h"
+	"cfgfile.h"
+	"bgmusic.h"
+	"resource.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<OpenGL/OpenGL.h>
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/cfgfile.h
+
+1266710468 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/resource.h
+
+1456472220 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_warp.c
+	"quakedef.h"
+	"gl_warp_sin.h"
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/gl_warp_sin.h
+
+1466832082 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/host.c
+	"quakedef.h"
+	"bgmusic.h"
+	<setjmp.h>
+
+1466832251 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/host_cmd.c
+	"quakedef.h"
+	<dirent.h>
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/image.c
+	"quakedef.h"
+
+1466984261 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/in_sdl.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<IOKit/IOTypes.h>
+	<IOKit/hidsystem/IOHIDLib.h>
+	<IOKit/hidsystem/IOHIDParameter.h>
+	<IOKit/hidsystem/event_status_driver.h>
+
+1456869610 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/keys.c
+	"quakedef.h"
+	"arch_def.h"
+
+1471951464 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/arch_def.h
+
+1452414530 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/main_sdl.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<stdio.h>
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/mathlib.c
+	"quakedef.h"
+
+1456869610 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/menu.c
+	"quakedef.h"
+	"bgmusic.h"
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net_bsd.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_dgrm.h"
+	"net_loop.h"
+	"net_udp.h"
+
+1471951464 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net_sys.h
+	<sys/types.h>
+	<errno.h>
+	<stddef.h>
+	<limits.h>
+	<sys/param.h>
+	<sys/ioctl.h>
+	<sys/filio.h>
+	<sys/sockio.h>
+	<unistd.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<sys/param.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<proto/exec.h>
+	<proto/socket.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<winsock.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net_defs.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net_dgrm.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net_loop.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net_udp.h
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net_dgrm.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_dgrm.h"
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net_loop.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_loop.h"
+
+1427880610 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net_main.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/net_udp.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_udp.h"
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/pl_linux.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	"qs_bmp.h"
+
+1348542453 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/qs_bmp.h
+
+1466750848 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/pr_cmds.c
+	"quakedef.h"
+
+1454029511 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/pr_edict.c
+	"quakedef.h"
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/pr_exec.c
+	"quakedef.h"
+
+1442779849 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/r_alias.c
+	"quakedef.h"
+	"anorms.h"
+	"anorm_dots.h"
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/anorms.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/anorm_dots.h
+
+1461880032 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/r_brush.c
+	"quakedef.h"
+
+1466750848 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/r_part.c
+	"quakedef.h"
+
+1441046198 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/r_sprite.c
+	"quakedef.h"
+
+1437947485 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/r_world.c
+	"quakedef.h"
+
+1444112310 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/sbar.c
+	"quakedef.h"
+
+1450765349 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_dma.c
+	"quakedef.h"
+	"snd_codec.h"
+	"bgmusic.h"
+
+1424335033 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_flac.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_flac.h"
+	<FLAC/stream_decoder.h>
+	<FLAC/seekable_stream_decoder.h>
+	<FLAC/metadata.h>
+
+1380106872 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_codeci.h
+
+1374415326 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_flac.h
+
+1432579117 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_mem.c
+	"quakedef.h"
+
+1470629054 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_mikmod.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_mikmod.h"
+	<mikmod.h>
+
+1380106872 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_mikmod.h
+
+1411376146 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_mix.c
+	"quakedef.h"
+
+1380106872 source:/home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_modplug.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_modplug.h"
+	<libmodplug/modplug.h>
+
+1380106872 /home/darwin/Documents/ProjectStuffs/quakespasm-0.92.1/Quake/snd_modplug.h
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/bgmusic.c
+	"quakedef.h"
+	"snd_codec.h"
+	"bgmusic.h"
+
+1494433677 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/quakedef.h
+	"q_stdinc.h"
+	"common.h"
+	"bspfile.h"
+	"sys.h"
+	"zone.h"
+	"mathlib.h"
+	"cvar.h"
+	"protocol.h"
+	"net.h"
+	"cmd.h"
+	"crc.h"
+	"progs.h"
+	"server.h"
+	"platform.h"
+	<SDL2/SDL.h>
+	<SDL2/SDL_opengl.h>
+	<SDL/SDL.h>
+	<SDL/SDL_opengl.h>
+	"SDL.h"
+	"SDL_opengl.h"
+	"console.h"
+	"wad.h"
+	"vid.h"
+	"screen.h"
+	"draw.h"
+	"render.h"
+	"view.h"
+	"sbar.h"
+	"q_sound.h"
+	"client.h"
+	"gl_model.h"
+	"world.h"
+	"image.h"
+	"gl_texmgr.h"
+	"input.h"
+	"keys.h"
+	"menu.h"
+	"cdaudio.h"
+	"glquake.h"
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/q_stdinc.h
+	<sys/types.h>
+	<stddef.h>
+	<limits.h>
+	<sys/param.h>
+	"msinttypes/stdint.h"
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/common.h
+	"strl_fn.h"
+
+1324983819 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/strl_fn.h
+
+1494432099 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/bspfile.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/sys.h
+
+1494432099 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/zone.h
+
+1494432101 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/mathlib.h
+	<math.h>
+
+1494432101 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cvar.h
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/protocol.h
+
+1427880610 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net.h
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cmd.h
+
+1266710468 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/crc.h
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/progs.h
+	"pr_comp.h"
+	"progdefs.h"
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/pr_comp.h
+
+1266710468 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/progdefs.h
+	"progdefs.q1"
+
+1266276415 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/progdefs.q1
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/server.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/platform.h
+
+1432518483 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/console.h
+
+1494432099 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/wad.h
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/vid.h
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/screen.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/draw.h
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/render.h
+
+1455323320 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/view.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/sbar.h
+
+1494432099 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/q_sound.h
+
+1494432101 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/client.h
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_model.h
+	"modelgen.h"
+	"spritegn.h"
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/modelgen.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"cmdlib.h"
+	"scriplib.h"
+	"trilib.h"
+	"lbmlib.h"
+	"mathlib.h"
+
+1494432101 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/spritegn.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"cmdlib.h"
+	"scriplib.h"
+	"dictlib.h"
+	"trilib.h"
+	"lbmlib.h"
+	"mathlib.h"
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/world.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/image.h
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_texmgr.h
+
+1456869610 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/input.h
+
+1471801041 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/keys.h
+
+1494432101 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/menu.h
+
+1494432101 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cdaudio.h
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/glquake.h
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_codec.h
+
+1361983825 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/bgmusic.h
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cd_sdl.c
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	"cd_null.c"
+	"quakedef.h"
+
+1411376146 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cd_null.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cfgfile.c
+	"quakedef.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/chase.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cl_demo.c
+	"quakedef.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cl_input.c
+	"quakedef.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cl_main.c
+	"quakedef.h"
+	"bgmusic.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cl_parse.c
+	"quakedef.h"
+	"bgmusic.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cl_tent.c
+	"quakedef.h"
+
+1440323791 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cmd.c
+	"quakedef.h"
+
+1494433582 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/console.c
+	<sys/types.h>
+	<time.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<io.h>
+	<unistd.h>
+	"quakedef.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/crc.c
+	"quakedef.h"
+	"crc.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cvar.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_draw.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_fog.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_mesh.c
+	"quakedef.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_model.c
+	"quakedef.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_refrag.c
+	"quakedef.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_rlight.c
+	"quakedef.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_rmain.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_rmisc.c
+	"quakedef.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_screen.c
+	"quakedef.h"
+
+1494433812 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_sky.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_texmgr.c
+	"quakedef.h"
+
+1461880032 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_vidsdl.c
+	"quakedef.h"
+	"cfgfile.h"
+	"bgmusic.h"
+	"resource.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<OpenGL/OpenGL.h>
+
+1411376146 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/cfgfile.h
+
+1266710468 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/resource.h
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_warp.c
+	"quakedef.h"
+	"gl_warp_sin.h"
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/gl_warp_sin.h
+
+1494434047 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/host.c
+	"quakedef.h"
+	"bgmusic.h"
+	<setjmp.h>
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/host_cmd.c
+	"quakedef.h"
+	<dirent.h>
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/image.c
+	"quakedef.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/in_sdl.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<IOKit/IOTypes.h>
+	<IOKit/hidsystem/IOHIDLib.h>
+	<IOKit/hidsystem/IOHIDParameter.h>
+	<IOKit/hidsystem/event_status_driver.h>
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/keys.c
+	"quakedef.h"
+	"arch_def.h"
+
+1471951464 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/arch_def.h
+
+1494433722 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/main_sdl.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<stdio.h>
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/mathlib.c
+	"quakedef.h"
+
+1494433582 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/menu.c
+	"quakedef.h"
+	"bgmusic.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net_bsd.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_dgrm.h"
+	"net_loop.h"
+	"net_udp.h"
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net_sys.h
+	<sys/types.h>
+	<errno.h>
+	<stddef.h>
+	<limits.h>
+	<sys/param.h>
+	<sys/ioctl.h>
+	<sys/filio.h>
+	<sys/sockio.h>
+	<unistd.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<sys/param.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<proto/exec.h>
+	<proto/socket.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<winsock.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net_defs.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net_dgrm.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net_loop.h
+
+1411376146 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net_udp.h
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net_dgrm.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_dgrm.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net_loop.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_loop.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net_main.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/net_udp.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_udp.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/pl_linux.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	"qs_bmp.h"
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/qs_bmp.h
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/pr_cmds.c
+	"quakedef.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/pr_edict.c
+	"quakedef.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/pr_exec.c
+	"quakedef.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/r_alias.c
+	"quakedef.h"
+	"anorms.h"
+	"anorm_dots.h"
+
+1494432100 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/anorms.h
+
+1494432101 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/anorm_dots.h
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/r_brush.c
+	"quakedef.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/r_part.c
+	"quakedef.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/r_sprite.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/r_world.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/sbar.c
+	"quakedef.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_codec.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_mikmod.h"
+	"snd_modplug.h"
+	"snd_umx.h"
+	"snd_wave.h"
+	"snd_flac.h"
+	"snd_mp3.h"
+	"snd_vorbis.h"
+	"snd_opus.h"
+
+1494432101 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_codeci.h
+
+1380106872 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_mikmod.h
+
+1380106872 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_modplug.h
+
+1380106872 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_umx.h
+
+1294257043 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_wave.h
+
+1374415326 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_flac.h
+
+1297713772 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_mp3.h
+
+1361983825 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_vorbis.h
+
+1374130991 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_opus.h
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_dma.c
+	"quakedef.h"
+	"snd_codec.h"
+	"bgmusic.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_flac.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_flac.h"
+	<FLAC/stream_decoder.h>
+	<FLAC/seekable_stream_decoder.h>
+	<FLAC/metadata.h>
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_mem.c
+	"quakedef.h"
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_mikmod.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_mikmod.h"
+	<mikmod.h>
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_mix.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_modplug.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_modplug.h"
+	<libmodplug/modplug.h>
+
+1494432258 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/common.c
+	"quakedef.h"
+	"q_ctype.h"
+	<errno.h>
+
+1471951464 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/q_ctype.h
+
+1494432101 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_mp3.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_mp3.h"
+	<mad.h>
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_opus.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_opus.h"
+	<errno.h>
+	<opusfile.h>
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_sdl.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_umx.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_umx.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_vorbis.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_vorbis.h"
+	<tremor/ivorbisfile.h>
+	<vorbis/vorbisfile.h>
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_wave.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_wave.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/strlcat.c
+	<sys/types.h>
+	<string.h>
+	"strl_fn.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/strlcpy.c
+	<sys/types.h>
+	<string.h>
+	"strl_fn.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/sv_main.c
+	"quakedef.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/sv_move.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/sv_phys.c
+	"quakedef.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/sv_user.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/sys_sdl_unix.c
+	"arch_def.h"
+	"quakedef.h"
+	<sys/types.h>
+	<errno.h>
+	<unistd.h>
+	<libgen.h>
+	<sys/stat.h>
+	<sys/time.h>
+	<fcntl.h>
+	<time.h>
+	<pwd.h>
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<sys/sysctl.h>
+	<sys/sysctl.h>
+	<sys/mpctl.h>
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/view.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/wad.c
+	"quakedef.h"
+
+1494432099 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/world.c
+	"quakedef.h"
+
+1494432100 source:/home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/zone.c
+	"quakedef.h"
+
+1484664039 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_voip.h
+
+1481624371 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_xmp.h
+
