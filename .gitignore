@@ -4,3 +4,5 @@ Linux/CodeBlocks/bin/Debug/
 Linux/CodeBlocks/bin/Release/
 
 Linux/CodeBlocks/obj/
+
+*.o
