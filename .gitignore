@@ -6,3 +6,6 @@ Linux/CodeBlocks/bin/Release/
 Linux/CodeBlocks/obj/
 
 *.o
+
+/TEst/*
+/ToAdd/*
