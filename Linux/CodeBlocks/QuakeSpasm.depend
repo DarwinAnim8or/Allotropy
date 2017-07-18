@@ -1269,3 +1269,598 @@
 
 1481624371 /home/darwin/Documents/ProjectStuffs/QuakeEngine/Quake/snd_xmp.h
 
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/bgmusic.c
+	"quakedef.h"
+	"snd_codec.h"
+	"bgmusic.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/quakedef.h
+	"q_stdinc.h"
+	"common.h"
+	"bspfile.h"
+	"sys.h"
+	"zone.h"
+	"mathlib.h"
+	"cvar.h"
+	"protocol.h"
+	"net.h"
+	"cmd.h"
+	"crc.h"
+	"progs.h"
+	"server.h"
+	"platform.h"
+	<SDL2/SDL.h>
+	<SDL2/SDL_opengl.h>
+	<SDL/SDL.h>
+	<SDL/SDL_opengl.h>
+	"SDL.h"
+	"SDL_opengl.h"
+	"console.h"
+	"wad.h"
+	"vid.h"
+	"screen.h"
+	"draw.h"
+	"render.h"
+	"view.h"
+	"sbar.h"
+	"q_sound.h"
+	"client.h"
+	"gl_model.h"
+	"world.h"
+	"image.h"
+	"gl_texmgr.h"
+	"input.h"
+	"keys.h"
+	"menu.h"
+	"cdaudio.h"
+	"glquake.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/q_stdinc.h
+	<sys/types.h>
+	<stddef.h>
+	<limits.h>
+	<sys/param.h>
+	"msinttypes/stdint.h"
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/common.h
+	"strl_fn.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/strl_fn.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/bspfile.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/sys.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/zone.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/mathlib.h
+	<math.h>
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/cvar.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/protocol.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/net.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/cmd.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/crc.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/progs.h
+	"pr_comp.h"
+	"progdefs.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/pr_comp.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/progdefs.h
+	"progdefs.q1"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/progdefs.q1
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/server.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/platform.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/console.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/wad.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/vid.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/screen.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/draw.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/render.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/view.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/sbar.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/q_sound.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/client.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/gl_model.h
+	"modelgen.h"
+	"spritegn.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/modelgen.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"cmdlib.h"
+	"scriplib.h"
+	"trilib.h"
+	"lbmlib.h"
+	"mathlib.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/spritegn.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"cmdlib.h"
+	"scriplib.h"
+	"dictlib.h"
+	"trilib.h"
+	"lbmlib.h"
+	"mathlib.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/world.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/image.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/gl_texmgr.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/input.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/keys.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/menu.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/cdaudio.h
+
+1500142969 /home/darwin/Projects/Allotropy/Quake/glquake.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/snd_codec.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/bgmusic.h
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/cd_sdl.c
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	"cd_null.c"
+	"quakedef.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/cd_null.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/cfgfile.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/chase.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/cl_demo.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/cl_input.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/cl_main.c
+	"quakedef.h"
+	"bgmusic.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/cl_parse.c
+	"quakedef.h"
+	"bgmusic.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/cl_tent.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/cmd.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/common.c
+	"quakedef.h"
+	"q_ctype.h"
+	<errno.h>
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/q_ctype.h
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/console.c
+	<sys/types.h>
+	<time.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<io.h>
+	<unistd.h>
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/crc.c
+	"quakedef.h"
+	"crc.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/cvar.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_draw.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_fog.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_mesh.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_model.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_refrag.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_rlight.c
+	"quakedef.h"
+
+1500142521 source:/home/darwin/Projects/Allotropy/Quake/gl_rmain.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_rmisc.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_screen.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_sky.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_texmgr.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_vidsdl.c
+	"quakedef.h"
+	"cfgfile.h"
+	"bgmusic.h"
+	"resource.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<OpenGL/OpenGL.h>
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/cfgfile.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/resource.h
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/gl_warp.c
+	"quakedef.h"
+	"gl_warp_sin.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/gl_warp_sin.h
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/host.c
+	"quakedef.h"
+	"bgmusic.h"
+	<setjmp.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/host_cmd.c
+	"quakedef.h"
+	<dirent.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/image.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/in_sdl.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<IOKit/IOTypes.h>
+	<IOKit/hidsystem/IOHIDLib.h>
+	<IOKit/hidsystem/IOHIDParameter.h>
+	<IOKit/hidsystem/event_status_driver.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/keys.c
+	"quakedef.h"
+	"arch_def.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/arch_def.h
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/main_sdl.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<stdio.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/mathlib.c
+	"quakedef.h"
+
+1499775321 source:/home/darwin/Projects/Allotropy/Quake/menu.c
+	"quakedef.h"
+	"bgmusic.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/net_bsd.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_dgrm.h"
+	"net_loop.h"
+	"net_udp.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/net_sys.h
+	<sys/types.h>
+	<errno.h>
+	<stddef.h>
+	<limits.h>
+	<sys/param.h>
+	<sys/ioctl.h>
+	<sys/filio.h>
+	<sys/sockio.h>
+	<unistd.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<sys/param.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<proto/exec.h>
+	<proto/socket.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<winsock.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/net_defs.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/net_dgrm.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/net_loop.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/net_udp.h
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/net_dgrm.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_dgrm.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/net_loop.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_loop.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/net_main.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/net_udp.c
+	"q_stdinc.h"
+	"arch_def.h"
+	"net_sys.h"
+	"quakedef.h"
+	"net_defs.h"
+	"net_udp.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/pl_linux.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	"qs_bmp.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/qs_bmp.h
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/pr_cmds.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/pr_edict.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/pr_exec.c
+	"quakedef.h"
+
+1500143006 source:/home/darwin/Projects/Allotropy/Quake/r_alias.c
+	"quakedef.h"
+	"anorms.h"
+	"anorm_dots.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/anorms.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/anorm_dots.h
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/r_brush.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/r_part.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/r_sprite.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/r_world.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/sbar.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_codec.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_mikmod.h"
+	"snd_modplug.h"
+	"snd_umx.h"
+	"snd_wave.h"
+	"snd_flac.h"
+	"snd_mp3.h"
+	"snd_vorbis.h"
+	"snd_opus.h"
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/snd_codeci.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/snd_mikmod.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/snd_modplug.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/snd_umx.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/snd_wave.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/snd_flac.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/snd_mp3.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/snd_vorbis.h
+
+1499773300 /home/darwin/Projects/Allotropy/Quake/snd_opus.h
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_dma.c
+	"quakedef.h"
+	"snd_codec.h"
+	"bgmusic.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_flac.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_flac.h"
+	<FLAC/stream_decoder.h>
+	<FLAC/seekable_stream_decoder.h>
+	<FLAC/metadata.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_mem.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_mikmod.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_mikmod.h"
+	<mikmod.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_mix.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_modplug.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_modplug.h"
+	<libmodplug/modplug.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_mp3.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_mp3.h"
+	<mad.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_opus.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_opus.h"
+	<errno.h>
+	<opusfile.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_sdl.c
+	"quakedef.h"
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_umx.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_umx.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_vorbis.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_vorbis.h"
+	<tremor/ivorbisfile.h>
+	<vorbis/vorbisfile.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/snd_wave.c
+	"quakedef.h"
+	"snd_codec.h"
+	"snd_codeci.h"
+	"snd_wave.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/strlcat.c
+	<sys/types.h>
+	<string.h>
+	"strl_fn.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/strlcpy.c
+	<sys/types.h>
+	<string.h>
+	"strl_fn.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/sv_main.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/sv_move.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/sv_phys.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/sv_user.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/sys_sdl_unix.c
+	"arch_def.h"
+	"quakedef.h"
+	<sys/types.h>
+	<errno.h>
+	<unistd.h>
+	<libgen.h>
+	<sys/stat.h>
+	<sys/time.h>
+	<fcntl.h>
+	<time.h>
+	<pwd.h>
+	<SDL2/SDL.h>
+	<SDL/SDL.h>
+	"SDL.h"
+	<sys/sysctl.h>
+	<sys/sysctl.h>
+	<sys/mpctl.h>
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/view.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/wad.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/world.c
+	"quakedef.h"
+
+1499773300 source:/home/darwin/Projects/Allotropy/Quake/zone.c
+	"quakedef.h"
+

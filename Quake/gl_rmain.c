@@ -598,7 +598,7 @@ void R_DrawEntitiesOnList (qboolean alphapass) { //johnfitz -- added parameter
 
         switch (currententity->model->type) {
         case mod_alias:
-            R_DrawAliasModel (currententity);
+            R_DrawAliasModel (currententity, 0.0f, 0.0f, 0.0f);
             break;
         case mod_brush:
             R_DrawBrushModel (currententity);
@@ -633,7 +633,9 @@ void R_DrawViewModel (void) {
 
     // hack the depth range to prevent view model from poking into walls
     glDepthRange (0, 0.3);
-    R_DrawAliasModel (currententity);
+    glTranslatef(0.5f, 0.0f, 0.0f); //LBB: adds a little bit of extra movement when looking around.
+    R_DrawAliasModel (currententity, 0.0f, -4.0f, 1.5f);
+    glTranslatef(0.0f, 0.0f, 0.0f); //LBB: just to be safe, set it back to normal.
     glDepthRange (0, 1);
 }
 

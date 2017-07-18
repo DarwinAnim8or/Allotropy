@@ -846,11 +846,12 @@ void M_Net_Draw (void) {
 
     f = 32;
 
-    if (ipxAvailable)
+    //Darwin: Commenting this out because we don't want people to use the NetQuake protocol.
+    /*if (ipxAvailable)
         p = Draw_CachePic ("gfx/netmen3.lmp");
     else
         p = Draw_CachePic ("gfx/dim_ipx.lmp");
-    M_DrawTransPic (72, f, p);
+    M_DrawTransPic (72, f, p);*/
 
     f += 19;
     if (tcpipAvailable)

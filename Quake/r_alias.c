@@ -555,7 +555,7 @@ void R_SetupAliasLighting (entity_t	*e) {
 R_DrawAliasModel -- johnfitz -- almost completely rewritten
 =================
 */
-void R_DrawAliasModel (entity_t *e) {
+void R_DrawAliasModel (entity_t *e, float xoffset, float yoffset, float zoffset) {
     aliashdr_t	*paliashdr;
     int			i, anim;
     gltexture_t	*tx, *fb;
@@ -576,10 +576,11 @@ void R_DrawAliasModel (entity_t *e) {
 
     //
     // transform it
+    // LBB: Added x/y/z offsets for moving the viewmodel.
     //
     glPushMatrix ();
     R_RotateForEntity (lerpdata.origin, lerpdata.angles);
-    glTranslatef (paliashdr->scale_origin[0], paliashdr->scale_origin[1], paliashdr->scale_origin[2]);
+    glTranslatef (paliashdr->scale_origin[0] + xoffset, paliashdr->scale_origin[1] + yoffset, paliashdr->scale_origin[2] + zoffset);
     glScalef (paliashdr->scale[0], paliashdr->scale[1], paliashdr->scale[2]);
 
     //
