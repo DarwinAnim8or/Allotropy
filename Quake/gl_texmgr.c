@@ -3,6 +3,7 @@ Copyright (C) 1996-2001 Id Software, Inc.
 Copyright (C) 2002-2009 John Fitzgibbons and others
 Copyright (C) 2007-2008 Kristian Duske
 Copyright (C) 2010-2014 QuakeSpasm developers
+Copyright (C) 2017 Gie Vanommeslaeghe
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -495,14 +496,14 @@ choose safe warpimage size and resize existing warpimage textures
 =============
 */
 void TexMgr_RecalcWarpImageSize (void) {
-    int	mark, oldsize;
+    int	mark; //, oldsize; //GieV: This variable ('oldsize') is unused, so I'm commenting it out.
     gltexture_t *glt;
     byte *dummy;
 
     //
     // find the new correct size
     //
-    oldsize = gl_warpimagesize;
+    //oldsize = gl_warpimagesize; //GieV: No need to init this variable if it's never used.
 
     gl_warpimagesize = TexMgr_SafeTextureSize (512);
 

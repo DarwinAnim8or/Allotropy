@@ -2,6 +2,7 @@
 Copyright (C) 1996-2001 Id Software, Inc.
 Copyright (C) 2002-2009 John Fitzgibbons and others
 Copyright (C) 2010-2014 QuakeSpasm developers
+Copyright (C) 2017 Gie Vanommeslaeghe
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -576,7 +577,7 @@ void R_DrawAliasModel (entity_t *e, float xoffset, float yoffset, float zoffset)
 
     //
     // transform it
-    // LBB: Added x/y/z offsets for moving the viewmodel.
+    // GieV: Added x/y/z offsets for moving the viewmodel.
     //
     glPushMatrix ();
     R_RotateForEntity (lerpdata.origin, lerpdata.angles);

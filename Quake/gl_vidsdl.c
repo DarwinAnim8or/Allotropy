@@ -3,6 +3,8 @@ Copyright (C) 1996-2001 Id Software, Inc.
 Copyright (C) 2002-2009 John Fitzgibbons and others
 Copyright (C) 2007-2008 Kristian Duske
 Copyright (C) 2010-2014 QuakeSpasm developers
+Copyright (C) 2017 Gie Vanommeslaeghe
+Copyright (C) 2017 Gie Vanommeslaeghe
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -1553,7 +1555,7 @@ void	VID_Toggle (void) {
     // keep all the mode changing code in one place.
     static qboolean vid_toggle_works = false;
     qboolean toggleWorked;
-    Uint32 flags = 0;
+    //Uint32 flags = 0; //GieV: This variable is unused, so I'm commenting it out.
 
     S_ClearBuffer ();
 

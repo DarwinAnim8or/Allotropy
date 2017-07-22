@@ -2,6 +2,7 @@
 Copyright (C) 1996-2001 Id Software, Inc.
 Copyright (C) 2002-2009 John Fitzgibbons and others
 Copyright (C) 2010-2014 QuakeSpasm developers
+Copyright (C) 2017 Gie Vanommeslaeghe
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -633,9 +634,9 @@ void R_DrawViewModel (void) {
 
     // hack the depth range to prevent view model from poking into walls
     glDepthRange (0, 0.3);
-    glTranslatef(0.5f, 0.0f, 0.0f); //LBB: adds a little bit of extra movement when looking around.
+    glTranslatef(0.5f, 0.0f, 0.0f); //GieV: adds a little bit of extra movement when looking around.
     R_DrawAliasModel (currententity, 0.0f, -4.0f, 1.5f);
-    glTranslatef(0.0f, 0.0f, 0.0f); //LBB: just to be safe, set it back to normal.
+    glTranslatef(0.0f, 0.0f, 0.0f); //GieV: just to be safe, set it back to normal.
     glDepthRange (0, 1);
 }
 
