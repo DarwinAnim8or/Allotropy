@@ -170,7 +170,7 @@ void Sky_LoadSkyBox (const char *name) {
     //load textures
     for (i=0; i<6; i++) {
         mark = Hunk_LowMark ();
-        q_snprintf (filename, sizeof(filename), "gfx/env/%s%s", name, suf[i]);
+        q_snprintf (filename, sizeof(filename), "gui/env/%s%s", name, suf[i]);
         data = Image_LoadImage (filename, &width, &height);
         if (data) {
             skybox_textures[i] = TexMgr_LoadImage (cl.worldmodel, filename, width, height, SRC_RGBA, data, filename, 0, TEXPREF_NONE);

@@ -41,7 +41,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #define	TYP_SOUND		67
 #define	TYP_MIPTEX		68
 
-#define	WADFILENAME "gfx.wad" //johnfitz -- filename is now hard-coded for honesty
+//#define	WADFILENAME "gfx.wad" //johnfitz -- filename is now hard-coded for honesty
+#define	WADFILENAME "gui.wad" //GieV: renamed the wad to represent what it actually is.
 
 typedef struct {
     int			width, height;

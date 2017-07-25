@@ -278,7 +278,7 @@ qpic_t	*Draw_CachePic (const char *path) {
     // HACK HACK HACK --- we need to keep the bytes for
     // the translatable player picture just for the menu
     // configuration dialog
-    if (!strcmp (path, "gfx/menuplyr.lmp"))
+    if (!strcmp (path, "gui/menuplyr.lmp"))
         memcpy (menuplyr_pixels, dat->data, dat->width*dat->height);
 
     pic->pic.width = dat->width;
@@ -522,7 +522,7 @@ void Draw_ConsoleBackground (void) {
     qpic_t *pic;
     float alpha;
 
-    pic = Draw_CachePic ("gfx/conback.lmp");
+    pic = Draw_CachePic ("gui/conback.lmp");
     pic->width = vid.conwidth;
     pic->height = vid.conheight;
 

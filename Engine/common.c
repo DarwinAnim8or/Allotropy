@@ -1120,7 +1120,7 @@ static void COM_CheckRegistered (void) {
     unsigned short	check[128];
     int		i;
 
-    COM_OpenFile("gfx/pop.lmp", &h, NULL);
+    COM_OpenFile("gui/pop.lmp", &h, NULL);
 
     if (h == -1) {
         //Cvar_SetROM ("registered", "0");

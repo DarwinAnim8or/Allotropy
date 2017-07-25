@@ -1963,7 +1963,7 @@
 
 1500486506 /home/darwin/Projects/Allotropy/Engine/console.h
 
-1500486506 /home/darwin/Projects/Allotropy/Engine/wad.h
+1501002205 /home/darwin/Projects/Allotropy/Engine/wad.h
 
 1500486505 /home/darwin/Projects/Allotropy/Engine/vid.h
 
@@ -2064,7 +2064,7 @@
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/cmd.c
 	"quakedef.h"
 
-1500486507 source:/home/darwin/Projects/Allotropy/Engine/common.c
+1500926942 source:/home/darwin/Projects/Allotropy/Engine/common.c
 	"quakedef.h"
 	"q_ctype.h"
 	<errno.h>
@@ -2087,7 +2087,7 @@
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/cvar.c
 	"quakedef.h"
 
-1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_draw.c
+1500926943 source:/home/darwin/Projects/Allotropy/Engine/gl_draw.c
 	"quakedef.h"
 
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_fog.c
@@ -2111,16 +2111,16 @@
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_rmisc.c
 	"quakedef.h"
 
-1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_screen.c
+1500926943 source:/home/darwin/Projects/Allotropy/Engine/gl_screen.c
 	"quakedef.h"
 
-1500486505 source:/home/darwin/Projects/Allotropy/Engine/gl_sky.c
+1500926942 source:/home/darwin/Projects/Allotropy/Engine/gl_sky.c
 	"quakedef.h"
 
-1500723680 source:/home/darwin/Projects/Allotropy/Engine/gl_texmgr.c
+1500926943 source:/home/darwin/Projects/Allotropy/Engine/gl_texmgr.c
 	"quakedef.h"
 
-1500723611 source:/home/darwin/Projects/Allotropy/Engine/gl_vidsdl.c
+1500926942 source:/home/darwin/Projects/Allotropy/Engine/gl_vidsdl.c
 	"quakedef.h"
 	"cfgfile.h"
 	"bgmusic.h"
@@ -2140,7 +2140,7 @@
 
 1499773300 /home/darwin/Projects/Allotropy/Engine/gl_warp_sin.h
 
-1500486506 source:/home/darwin/Projects/Allotropy/Engine/host.c
+1500926943 source:/home/darwin/Projects/Allotropy/Engine/host.c
 	"quakedef.h"
 	"bgmusic.h"
 	<setjmp.h>
@@ -2178,7 +2178,7 @@
 1500486505 source:/home/darwin/Projects/Allotropy/Engine/mathlib.c
 	"quakedef.h"
 
-1500486506 source:/home/darwin/Projects/Allotropy/Engine/menu.c
+1500926943 source:/home/darwin/Projects/Allotropy/Engine/menu.c
 	"quakedef.h"
 	"bgmusic.h"
 
@@ -2297,7 +2297,7 @@
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/r_world.c
 	"quakedef.h"
 
-1500486506 source:/home/darwin/Projects/Allotropy/Engine/sbar.c
+1500926942 source:/home/darwin/Projects/Allotropy/Engine/sbar.c
 	"quakedef.h"
 
 1499773300 source:/home/darwin/Projects/Allotropy/Engine/snd_codec.c

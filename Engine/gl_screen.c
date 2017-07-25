@@ -603,7 +603,7 @@ void SCR_DrawPause (void) {
 
     GL_SetCanvas (CANVAS_MENU); //johnfitz
 
-    pic = Draw_CachePic ("gfx/pause.lmp");
+    pic = Draw_CachePic ("gui/pause.lmp");
     Draw_Pic ( (320 - pic->width)/2, (240 - 48 - pic->height)/2, pic); //johnfitz -- stretched menus
 
     scr_tileclear_updates = 0; //johnfitz
@@ -622,7 +622,7 @@ void SCR_DrawLoading (void) {
 
     GL_SetCanvas (CANVAS_MENU); //johnfitz
 
-    pic = Draw_CachePic ("gfx/loading.lmp");
+    pic = Draw_CachePic ("gui/loading.lmp");
     Draw_Pic ( (320 - pic->width)/2, (240 - 48 - pic->height)/2, pic); //johnfitz -- stretched menus
 
     scr_tileclear_updates = 0; //johnfitz

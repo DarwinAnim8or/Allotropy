@@ -800,7 +800,7 @@ void Host_Init (void) {
     Con_Printf ("%4.1f megabyte heap\n", host_parms->memsize/ (1024*1024.0));
 
     if (cls.state != ca_dedicated) {
-        host_colormap = (byte *)COM_LoadHunkFile ("gfx/colormap.lmp", NULL);
+        host_colormap = (byte *)COM_LoadHunkFile ("gui/colormap.lmp", NULL);
         if (!host_colormap)
             Sys_Error ("Couldn't load gfx/colormap.lmp");
 

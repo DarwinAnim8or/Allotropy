@@ -999,7 +999,7 @@ void Sbar_DeathmatchOverlay (void) {
 
     GL_SetCanvas (CANVAS_MENU); //johnfitz
 
-    pic = Draw_CachePic ("gfx/ranking.lmp");
+    pic = Draw_CachePic ("gui/ranking.lmp");
     M_DrawPic ((320-pic->width)/2, 8, pic);
 
 // scores
@@ -1151,10 +1151,10 @@ void Sbar_IntermissionOverlay (void) {
 
     GL_SetCanvas (CANVAS_MENU); //johnfitz
 
-    pic = Draw_CachePic ("gfx/complete.lmp");
+    pic = Draw_CachePic ("gui/complete.lmp");
     Draw_Pic (64, 24, pic);
 
-    pic = Draw_CachePic ("gfx/inter.lmp");
+    pic = Draw_CachePic ("gui/inter.lmp");
     Draw_Pic (0, 56, pic);
 
     dig = cl.completed_time/60;
@@ -1184,7 +1184,7 @@ void Sbar_FinaleOverlay (void) {
 
     GL_SetCanvas (CANVAS_MENU); //johnfitz
 
-    pic = Draw_CachePic ("gfx/finale.lmp");
+    pic = Draw_CachePic ("gui/finale.lmp");
     Draw_Pic ( (320 - pic->width)/2, 16, pic); //johnfitz -- stretched menus
 }
 

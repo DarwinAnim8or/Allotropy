@@ -413,9 +413,9 @@ void TexMgr_LoadPalette (void) {
     int i, mark;
     FILE *f;
 
-    COM_FOpenFile ("gfx/palette.lmp", &f, NULL);
+    COM_FOpenFile ("gui/palette.lmp", &f, NULL);
     if (!f)
-        Sys_Error ("Couldn't load gfx/palette.lmp");
+        Sys_Error ("Couldn't load gui/palette.lmp");
 
     mark = Hunk_LowMark ();
     pal = (byte *) Hunk_Alloc (768);

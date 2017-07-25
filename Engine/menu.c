@@ -143,30 +143,30 @@ void M_DrawTextBox (int x, int y, int width, int lines) {
     // draw left side
     cx = x;
     cy = y;
-    p = Draw_CachePic ("gfx/box_tl.lmp");
+    p = Draw_CachePic ("gui/box_tl.lmp");
     M_DrawTransPic (cx, cy, p);
-    p = Draw_CachePic ("gfx/box_ml.lmp");
+    p = Draw_CachePic ("gui/box_ml.lmp");
     for (n = 0; n < lines; n++) {
         cy += 8;
         M_DrawTransPic (cx, cy, p);
     }
-    p = Draw_CachePic ("gfx/box_bl.lmp");
+    p = Draw_CachePic ("gui/box_bl.lmp");
     M_DrawTransPic (cx, cy+8, p);
 
     // draw middle
     cx += 8;
     while (width > 0) {
         cy = y;
-        p = Draw_CachePic ("gfx/box_tm.lmp");
+        p = Draw_CachePic ("gui/box_tm.lmp");
         M_DrawTransPic (cx, cy, p);
-        p = Draw_CachePic ("gfx/box_mm.lmp");
+        p = Draw_CachePic ("gui/box_mm.lmp");
         for (n = 0; n < lines; n++) {
             cy += 8;
             if (n == 1)
-                p = Draw_CachePic ("gfx/box_mm2.lmp");
+                p = Draw_CachePic ("gui/box_mm2.lmp");
             M_DrawTransPic (cx, cy, p);
         }
-        p = Draw_CachePic ("gfx/box_bm.lmp");
+        p = Draw_CachePic ("gui/box_bm.lmp");
         M_DrawTransPic (cx, cy+8, p);
         width -= 2;
         cx += 16;
@@ -174,14 +174,14 @@ void M_DrawTextBox (int x, int y, int width, int lines) {
 
     // draw right side
     cy = y;
-    p = Draw_CachePic ("gfx/box_tr.lmp");
+    p = Draw_CachePic ("gui/box_tr.lmp");
     M_DrawTransPic (cx, cy, p);
-    p = Draw_CachePic ("gfx/box_mr.lmp");
+    p = Draw_CachePic ("gui/box_mr.lmp");
     for (n = 0; n < lines; n++) {
         cy += 8;
         M_DrawTransPic (cx, cy, p);
     }
-    p = Draw_CachePic ("gfx/box_br.lmp");
+    p = Draw_CachePic ("gui/box_br.lmp");
     M_DrawTransPic (cx, cy+8, p);
 }
 
@@ -239,14 +239,14 @@ void M_Main_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
-    p = Draw_CachePic ("gfx/ttl_main.lmp");
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    p = Draw_CachePic ("gui/ttl_main.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
-    M_DrawTransPic (72, 32, Draw_CachePic ("gfx/mainmenu.lmp") );
+    M_DrawTransPic (72, 32, Draw_CachePic ("gui/mainmenu.lmp") );
 
     f = (int)(realtime * 10)%6;
 
-    M_DrawTransPic (54, 32 + m_main_cursor * 20,Draw_CachePic( va("gfx/menudot%i.lmp", f+1 ) ) );
+    M_DrawTransPic (54, 32 + m_main_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
 }
 
 
@@ -324,14 +324,14 @@ void M_SinglePlayer_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
-    p = Draw_CachePic ("gfx/ttl_sgl.lmp");
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    p = Draw_CachePic ("gui/ttl_sgl.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
-    M_DrawTransPic (72, 32, Draw_CachePic ("gfx/sp_menu.lmp") );
+    M_DrawTransPic (72, 32, Draw_CachePic ("gui/sp_menu.lmp") );
 
     f = (int)(realtime * 10)%6;
 
-    M_DrawTransPic (54, 32 + m_singleplayer_cursor * 20,Draw_CachePic( va("gfx/menudot%i.lmp", f+1 ) ) );
+    M_DrawTransPic (54, 32 + m_singleplayer_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
 }
 
 
@@ -451,7 +451,7 @@ void M_Load_Draw (void) {
     int		i;
     qpic_t	*p;
 
-    p = Draw_CachePic ("gfx/p_load.lmp");
+    p = Draw_CachePic ("gui/p_load.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     for (i = 0; i < MAX_SAVEGAMES; i++)
@@ -466,7 +466,7 @@ void M_Save_Draw (void) {
     int		i;
     qpic_t	*p;
 
-    p = Draw_CachePic ("gfx/p_save.lmp");
+    p = Draw_CachePic ("gui/p_save.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     for (i = 0; i < MAX_SAVEGAMES; i++)
@@ -574,14 +574,14 @@ void M_MultiPlayer_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
-    p = Draw_CachePic ("gfx/p_multi.lmp");
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
-    M_DrawTransPic (72, 32, Draw_CachePic ("gfx/mp_menu.lmp") );
+    M_DrawTransPic (72, 32, Draw_CachePic ("gui/mp_menu.lmp") );
 
     f = (int)(realtime * 10)%6;
 
-    M_DrawTransPic (54, 32 + m_multiplayer_cursor * 20,Draw_CachePic( va("gfx/menudot%i.lmp", f+1 ) ) );
+    M_DrawTransPic (54, 32 + m_multiplayer_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
 
     if (ipxAvailable || tcpipAvailable)
         return;
@@ -660,8 +660,8 @@ void M_Menu_Setup_f (void) {
 void M_Setup_Draw (void) {
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
-    p = Draw_CachePic ("gfx/p_multi.lmp");
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     M_Print (64, 40, "Hostname");
@@ -678,9 +678,9 @@ void M_Setup_Draw (void) {
     M_DrawTextBox (64, 140-8, 14, 1);
     M_Print (72, 140, "Accept Changes");
 
-    p = Draw_CachePic ("gfx/bigbox.lmp");
+    p = Draw_CachePic ("gui/bigbox.lmp");
     M_DrawTransPic (160, 64, p);
-    p = Draw_CachePic ("gfx/menuplyr.lmp");
+    p = Draw_CachePic ("gui/menuplyr.lmp");
     M_DrawTransPicTranslate (172, 72, p, setup_top, setup_bottom);
 
     M_DrawCharacter (56, setup_cursor_table [setup_cursor], 12+((int)(realtime*4)&1));
@@ -841,24 +841,24 @@ void M_Net_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
-    p = Draw_CachePic ("gfx/p_multi.lmp");
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     f = 32;
 
     //Darwin: Commenting this out because we don't want people to use the NetQuake protocol.
     /*if (ipxAvailable)
-        p = Draw_CachePic ("gfx/netmen3.lmp");
+        p = Draw_CachePic ("gui/netmen3.lmp");
     else
-        p = Draw_CachePic ("gfx/dim_ipx.lmp");
+        p = Draw_CachePic ("gui/dim_ipx.lmp");
     M_DrawTransPic (72, f, p);*/
 
     f += 19;
     if (tcpipAvailable)
-        p = Draw_CachePic ("gfx/netmen4.lmp");
+        p = Draw_CachePic ("gui/netmen4.lmp");
     else
-        p = Draw_CachePic ("gfx/dim_tcp.lmp");
+        p = Draw_CachePic ("gui/dim_tcp.lmp");
     M_DrawTransPic (72, f, p);
 
     f = (320-26*8)/2;
@@ -870,7 +870,7 @@ void M_Net_Draw (void) {
     M_Print (f, 128, net_helpMessage[m_net_cursor*4+3]);
 
     f = (int)(realtime * 10)%6;
-    M_DrawTransPic (54, 32 + m_net_cursor * 20,Draw_CachePic( va("gfx/menudot%i.lmp", f+1 ) ) );
+    M_DrawTransPic (54, 32 + m_net_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
 }
 
 
@@ -1074,8 +1074,8 @@ void M_Options_Draw (void) {
     float		r, l;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
-    p = Draw_CachePic ("gfx/p_option.lmp");
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    p = Draw_CachePic ("gui/p_option.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     // Draw the items in the order of the enum defined above:
@@ -1311,7 +1311,7 @@ void M_Keys_Draw (void) {
     const char	*name;
     qpic_t	*p;
 
-    p = Draw_CachePic ("gfx/ttl_cstm.lmp");
+    p = Draw_CachePic ("gui/ttl_cstm.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     if (bind_grab)
@@ -1446,7 +1446,7 @@ void M_Menu_Help_f (void) {
 
 
 void M_Help_Draw (void) {
-    M_DrawPic (0, 0, Draw_CachePic ( va("gfx/help%i.lmp", help_page)) );
+    M_DrawPic (0, 0, Draw_CachePic ( va("gui/help%i.lmp", help_page)) );
 }
 
 
@@ -1607,8 +1607,8 @@ void M_LanConfig_Draw (void) {
     const char	*startJoin;
     const char	*protocol;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
-    p = Draw_CachePic ("gfx/p_multi.lmp");
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    p = Draw_CachePic ("gui/p_multi.lmp");
     basex = (320-p->width)/2;
     M_DrawPic (basex, 4, p);
 
@@ -1932,8 +1932,8 @@ void M_GameOptions_Draw (void) {
     qpic_t	*p;
     int		x;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gfx/qplaque.lmp") );
-    p = Draw_CachePic ("gfx/p_multi.lmp");
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     M_DrawTextBox (152, 32, 10, 1);
@@ -2235,7 +2235,7 @@ void M_Search_Draw (void) {
     qpic_t	*p;
     int x;
 
-    p = Draw_CachePic ("gfx/p_multi.lmp");
+    p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
     x = (320/2) - ((12*8)/2) + 4;
     M_DrawTextBox (x-8, 32, 12, 1);
@@ -2294,7 +2294,7 @@ void M_ServerList_Draw (void) {
         NET_SlistSort ();
     }
 
-    p = Draw_CachePic ("gfx/p_multi.lmp");
+    p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
     for (n = 0; n < hostCacheCount; n++)
         M_Print (16, 32 + 8*n, NET_SlistPrintServer (n));
