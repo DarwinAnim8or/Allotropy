@@ -2263,9 +2263,9 @@ void Mod_SetExtraFlags (qmodel_t *mod) {
         mod->flags |= MOD_NOSHADOW;
 
     // fullbright hack (TODO: make this a cvar list)
-    if (!strcmp (mod->name, "progs/flame2.mdl") ||
-            !strcmp (mod->name, "progs/flame.mdl") ||
-            !strcmp (mod->name, "progs/boss.mdl"))
+    if (!strcmp (mod->name, "models/flame2.mdl") ||
+            !strcmp (mod->name, "models/flame.mdl") ||
+            !strcmp (mod->name, "models/boss.mdl"))
         mod->flags |= MOD_FBRIGHTHACK;
 }
 

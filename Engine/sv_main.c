@@ -1108,7 +1108,7 @@ void SV_CreateBaseline (void) {
         svent->baseline.skin = svent->v.skin;
         if (entnum > 0 && entnum <= svs.maxclients) {
             svent->baseline.colormap = entnum;
-            svent->baseline.modelindex = SV_ModelIndex("progs/player.mdl");
+            svent->baseline.modelindex = SV_ModelIndex("models/player.mdl");
             svent->baseline.alpha = ENTALPHA_DEFAULT; //johnfitz -- alpha support
         } else {
             svent->baseline.colormap = 0;

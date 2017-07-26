@@ -3,7 +3,7 @@
 
 //{{NO_DEPENDENCIES}}
 // Microsoft Developer Studio generated include file.
-// Used by winquake.rc
+// Used by winallotropy.rdm
 //
 #define IDS_STRING1                     1
 #define IDI_ICON2                       1
@@ -12,7 +12,7 @@
 #define IDC_PROGRESS                    1000
 
 // Next default values for new objects
-// 
+//
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        113

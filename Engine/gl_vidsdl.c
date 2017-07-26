@@ -1909,7 +1909,7 @@ static void VID_MenuDraw (void) {
     y = 4;
 
     // plaque
-    p = Draw_CachePic ("gui/qplaque.lmp");
+    p = Draw_CachePic ("gui/logo.lmp");
     M_DrawTransPic (16, y, p);
 
     //p = Draw_CachePic ("gui/vidmodes.lmp");

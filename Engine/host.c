@@ -297,11 +297,11 @@ void Host_WriteConfiguration (void) {
 
         fclose (f);
 
-//johnfitz -- also save fitzquake.rc
+//johnfitz -- also save fitzallotropy.rdm
 #if 0
-        f = fopen (va("%s/fitzquake.rc", GAMENAME), "w"); //always save in id1
+        f = fopen (va("%s/fitzallotropy.rdm", GAMENAME), "w"); //always save in id1
         if (!f) {
-            Con_Printf ("Couldn't write fitzquake.rc.\n");
+            Con_Printf ("Couldn't write fitzallotropy.rdm.\n");
             return;
         }
 
@@ -830,7 +830,7 @@ void Host_Init (void) {
     Con_Printf ("\n========= Allotropy Initialized =========\n\n");
 
     if (cls.state != ca_dedicated) {
-        Cbuf_InsertText ("exec quake.rc\n");
+        Cbuf_InsertText ("exec allotropy.rdm\n");
         // johnfitz -- in case the vid mode was locked during vid_init, we can unlock it now.
         // note: two leading newlines because the command buffer swallows one of them.
         Cbuf_AddText ("\n\nvid_unlock\n");

@@ -630,7 +630,7 @@ void R_DrawAliasModel (entity_t *e, float xoffset, float yoffset, float zoffset)
     }
     if (e->colormap != vid.colormap && !gl_nocolors.value) {
         i = e - cl_entities;
-        if (i >= 1 && i<=cl.maxclients /* && !strcmp (currententity->model->name, "progs/player.mdl") */)
+        if (i >= 1 && i<=cl.maxclients /* && !strcmp (currententity->model->name, "models/player.mdl") */)
             tx = playertextures[i - 1];
     }
     if (!gl_fullbrights.value)

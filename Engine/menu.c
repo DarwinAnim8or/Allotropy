@@ -239,7 +239,7 @@ void M_Main_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/ttl_main.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
     M_DrawTransPic (72, 32, Draw_CachePic ("gui/mainmenu.lmp") );
@@ -324,7 +324,7 @@ void M_SinglePlayer_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/ttl_sgl.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
     M_DrawTransPic (72, 32, Draw_CachePic ("gui/sp_menu.lmp") );
@@ -574,7 +574,7 @@ void M_MultiPlayer_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
     M_DrawTransPic (72, 32, Draw_CachePic ("gui/mp_menu.lmp") );
@@ -660,7 +660,7 @@ void M_Menu_Setup_f (void) {
 void M_Setup_Draw (void) {
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
@@ -824,7 +824,7 @@ const char *net_helpMessage [] = {
 };
 
 void M_Menu_Net_f (void) {
-    IN_Deactivate(modestate == MS_WINDOWED);
+    /*IN_Deactivate(modestate == MS_WINDOWED);
     key_dest = key_menu;
     m_state = m_net;
     m_entersound = true;
@@ -833,7 +833,8 @@ void M_Menu_Net_f (void) {
     if (m_net_cursor >= m_net_items)
         m_net_cursor = 0;
     m_net_cursor--;
-    M_Net_Key (K_DOWNARROW);
+    M_Net_Key (K_DOWNARROW);*/
+    M_Menu_LanConfig_f();
 }
 
 
@@ -841,13 +842,13 @@ void M_Net_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     f = 32;
 
-    //Darwin: Commenting this out because we don't want people to use the NetQuake protocol.
+    //GieV: Commenting this out because we don't want people to use the NetQuake protocol.
     /*if (ipxAvailable)
         p = Draw_CachePic ("gui/netmen3.lmp");
     else
@@ -923,12 +924,12 @@ enum {
     OPT_SBALPHA,
     OPT_SNDVOL,
     OPT_MUSICVOL,
-    OPT_MUSICEXT,
+    //OPT_MUSICEXT,
     OPT_ALWAYRUN,
     OPT_INVMOUSE,
-    OPT_ALWAYSMLOOK,
-    OPT_LOOKSPRING,
-    OPT_LOOKSTRAFE,
+    //OPT_ALWAYSMLOOK,
+    //OPT_LOOKSPRING,
+    //OPT_LOOKSTRAFE,
 //#ifdef _WIN32
 //	OPT_USEMOUSE,
 //#endif
@@ -999,9 +1000,9 @@ void M_AdjustSliders (int dir) {
         else if (f > 1)	f = 1;
         Cvar_SetValue ("bgmvolume", f);
         break;
-    case OPT_MUSICEXT:	// enable external music vs cdaudio
-        Cvar_Set ("bgm_extmusic", bgm_extmusic.value ? "0" : "1");
-        break;
+    //case OPT_MUSICEXT:	// enable external music vs cdaudio
+     //   Cvar_Set ("bgm_extmusic", bgm_extmusic.value ? "0" : "1");
+       // break;
     case OPT_SNDVOL:	// sfx volume
         f = sfxvolume.value + dir * 0.1;
         if (f < 0)	f = 0;
@@ -1025,20 +1026,20 @@ void M_AdjustSliders (int dir) {
         Cvar_SetValue ("m_pitch", -m_pitch.value);
         break;
 
-    case OPT_ALWAYSMLOOK:
-        if (in_mlook.state & 1)
-            Cbuf_AddText("-mlook");
-        else
-            Cbuf_AddText("+mlook");
-        break;
+    //case OPT_ALWAYSMLOOK:
+      //  if (in_mlook.state & 1)
+        //    Cbuf_AddText("-mlook");
+        //else
+          //  Cbuf_AddText("+mlook");
+        //break;
 
-    case OPT_LOOKSPRING:	// lookspring
-        Cvar_Set ("lookspring", lookspring.value ? "0" : "1");
-        break;
+    //case OPT_LOOKSPRING:	// lookspring
+      //  Cvar_Set ("lookspring", lookspring.value ? "0" : "1");
+       // break;
 
-    case OPT_LOOKSTRAFE:	// lookstrafe
-        Cvar_Set ("lookstrafe", lookstrafe.value ? "0" : "1");
-        break;
+    //case OPT_LOOKSTRAFE:	// lookstrafe
+      //  Cvar_Set ("lookstrafe", lookstrafe.value ? "0" : "1");
+       // break;
     }
 }
 
@@ -1074,7 +1075,7 @@ void M_Options_Draw (void) {
     float		r, l;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_option.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
@@ -1082,18 +1083,18 @@ void M_Options_Draw (void) {
     // OPT_CUSTOMIZE:
     M_Print (16, 32,			"              Controls");
     // OPT_CONSOLE:
-    M_Print (16, 32 + 8*OPT_CONSOLE,	"          Goto console");
+    M_Print (16, 32 + 8*OPT_CONSOLE,	"          Open console");
     // OPT_DEFAULTS:
-    M_Print (16, 32 + 8*OPT_DEFAULTS,	"          Reset config");
+    M_Print (16, 32 + 8*OPT_DEFAULTS,	"        Reset settings");
 
     // OPT_SCALE:
-    M_Print (16, 32 + 8*OPT_SCALE,		"                 Scale");
+    M_Print (16, 32 + 8*OPT_SCALE,		"             GUI scale");
     l = (vid.width / 320.0) - 1;
     r = l > 0 ? (scr_conscale.value - 1) / l : 0;
     M_DrawSlider (220, 32 + 8*OPT_SCALE, r);
 
     // OPT_SCRSIZE:
-    M_Print (16, 32 + 8*OPT_SCRSIZE,	"           Screen size");
+    M_Print (16, 32 + 8*OPT_SCRSIZE,	"           Border size");
     r = (scr_viewsize.value - 30) / (120 - 30);
     M_DrawSlider (220, 32 + 8*OPT_SCRSIZE, r);
 
@@ -1108,7 +1109,7 @@ void M_Options_Draw (void) {
     M_DrawSlider (220, 32 + 8*OPT_CONTRAST, r);
 
     // OPT_MOUSESPEED:
-    M_Print (16, 32 + 8*OPT_MOUSESPEED,	"           Mouse Speed");
+    M_Print (16, 32 + 8*OPT_MOUSESPEED,	"     Mouse sensitivity");
     r = (sensitivity.value - 1)/10;
     M_DrawSlider (220, 32 + 8*OPT_MOUSESPEED, r);
 
@@ -1128,8 +1129,8 @@ void M_Options_Draw (void) {
     M_DrawSlider (220, 32 + 8*OPT_MUSICVOL, r);
 
     // OPT_MUSICEXT:
-    M_Print (16, 32 + 8*OPT_MUSICEXT,	"        External Music");
-    M_DrawCheckbox (220, 32 + 8*OPT_MUSICEXT, bgm_extmusic.value);
+    //M_Print (16, 32 + 8*OPT_MUSICEXT,	"        External Music");
+    //M_DrawCheckbox (220, 32 + 8*OPT_MUSICEXT, bgm_extmusic.value);
 
     // OPT_ALWAYRUN:
     M_Print (16, 32 + 8*OPT_ALWAYRUN,	"            Always Run");
@@ -1140,16 +1141,16 @@ void M_Options_Draw (void) {
     M_DrawCheckbox (220, 32 + 8*OPT_INVMOUSE, m_pitch.value < 0);
 
     // OPT_ALWAYSMLOOK:
-    M_Print (16, 32 + 8*OPT_ALWAYSMLOOK,	"            Mouse Look");
-    M_DrawCheckbox (220, 32 + 8*OPT_ALWAYSMLOOK, in_mlook.state & 1);
+    //M_Print (16, 32 + 8*OPT_ALWAYSMLOOK,	"            Mouse Look");
+    //M_DrawCheckbox (220, 32 + 8*OPT_ALWAYSMLOOK, in_mlook.state & 1);
 
     // OPT_LOOKSPRING:
-    M_Print (16, 32 + 8*OPT_LOOKSPRING,	"            Lookspring");
-    M_DrawCheckbox (220, 32 + 8*OPT_LOOKSPRING, lookspring.value);
+   // M_Print (16, 32 + 8*OPT_LOOKSPRING,	"            Lookspring");
+    //M_DrawCheckbox (220, 32 + 8*OPT_LOOKSPRING, lookspring.value);
 
     // OPT_LOOKSTRAFE:
-    M_Print (16, 32 + 8*OPT_LOOKSTRAFE,	"            Lookstrafe");
-    M_DrawCheckbox (220, 32 + 8*OPT_LOOKSTRAFE, lookstrafe.value);
+    //M_Print (16, 32 + 8*OPT_LOOKSTRAFE,	"            Lookstrafe");
+    //M_DrawCheckbox (220, 32 + 8*OPT_LOOKSTRAFE, lookstrafe.value);
 
     // OPT_VIDEO:
     if (vid_menudrawfn)
@@ -1181,7 +1182,7 @@ void M_Options_Key (int k) {
             break;
         case OPT_DEFAULTS:
             if (SCR_ModalMessage("This will reset all controls\n"
-                                 "and stored cvars. Continue? (y/n)\n", 15.0f)) {
+                                 "and stored settings. Continue? (y/n)\n", 15.0f)) { //GieV: changed this to 'settings' so new users know what they're resetting.
                 Cbuf_AddText ("resetcfg\n");
                 Cbuf_AddText ("exec default.cfg\n");
             }
@@ -1607,7 +1608,7 @@ void M_LanConfig_Draw (void) {
     const char	*startJoin;
     const char	*protocol;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_multi.lmp");
     basex = (320-p->width)/2;
     M_DrawPic (basex, 4, p);
@@ -1775,6 +1776,7 @@ typedef struct {
     const char	*description;
 } level_t;
 
+//GieV: I don't know who decided this was a good idea, but it really wasn't...
 level_t		levels[] = {
     {"start", "Entrance"},	// 0
 
@@ -1932,7 +1934,7 @@ void M_GameOptions_Draw (void) {
     qpic_t	*p;
     int		x;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/qplaque.lmp") );
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
@@ -2241,12 +2243,12 @@ void M_Search_Draw (void) {
     M_DrawTextBox (x-8, 32, 12, 1);
     M_Print (x, 40, "Searching...");
 
-    if(slistInProgress) {
+    if (slistInProgress) {
         NET_Poll();
         return;
     }
 
-    if (! searchComplete) {
+    if (!searchComplete) {
         searchComplete = true;
         searchCompleteTime = realtime;
     }
@@ -2256,7 +2258,7 @@ void M_Search_Draw (void) {
         return;
     }
 
-    M_PrintWhite ((320/2) - ((22*8)/2), 64, "No Quake servers found");
+    M_PrintWhite ((320/2) - ((22*8)/2), 64, "No servers found.");
     if ((realtime - searchCompleteTime) < 3.0)
         return;
 

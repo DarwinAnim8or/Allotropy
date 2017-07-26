@@ -338,7 +338,7 @@ void Sys_mkdir (const char *path) {
 }
 
 static const char errortxt1[] = "\nERROR-OUT BEGIN\n\n";
-static const char errortxt2[] = "\nQUAKE ERROR: ";
+static const char errortxt2[] = "\nALLOTROPY ERROR: ";
 
 void Sys_Error (const char *error, ...) {
     va_list		argptr;
