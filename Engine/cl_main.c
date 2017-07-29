@@ -516,6 +516,15 @@ void CL_RelinkEntities (void) {
             dl->die = cl.time + 0.001;
         }
 
+        //GieV: The light the flashlight uses, a modified EF_DIMLIGHT
+        if (ent->effects & EF_FLASHLIGHT) {
+            dl = CL_AllocDlight (i);
+            VectorCopy (ent->origin,  dl->origin);
+            dl->radius = 75; //+ (rand()&31);
+            dl->minlight = 32;
+            dl->die = cl.time + 0.001;
+        }
+
         if (ent->model->flags & EF_GIB)
             R_RocketTrail (oldorg, ent->origin, 2);
         else if (ent->model->flags & EF_ZOMGIB)

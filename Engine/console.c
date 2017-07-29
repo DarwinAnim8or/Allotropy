@@ -1135,7 +1135,7 @@ void Con_DrawConsole (int lines, qboolean drawinput) {
 
 //draw version number in bottom right
     y += 8;
-    sprintf (ver, "Allotropy %1.2f.%d", (float)DARWIN_VERSION, DARWIN_VERSION_PATCH);
+    sprintf (ver, "Allotropy [ALPHA] %1.2f.%d", (float)DARWIN_VERSION, DARWIN_VERSION_PATCH);
     for (x = 0; x < (int)strlen(ver); x++)
         Draw_Character ((con_linewidth - strlen(ver) + x + 2)<<3, y, ver[x] /*+ 128*/);
 }

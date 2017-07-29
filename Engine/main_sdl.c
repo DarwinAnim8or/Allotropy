@@ -131,7 +131,7 @@ int main(int argc, char *argv[]) {
     Sys_Printf("FitzQuake SDL port (c) SleepwalkR, Baker\n");
     Sys_Printf("QuakeSpasm %1.2f.%d (c) Ozkan Sezer, Eric Wasylishen & others\n",
                QUAKESPASM_VERSION, QUAKESPASM_VER_PATCH);
-    Sys_Printf("Allotropy %1.2f.%d (c) Gie Vanommeslaeghe\n", DARWIN_VERSION, DARWIN_VERSION_PATCH);
+    Sys_Printf("Allotropy [ALPHA] %1.2f.%d (c) Gie Vanommeslaeghe\n", DARWIN_VERSION, DARWIN_VERSION_PATCH);
 
     Sys_Printf("Host_Init\n");
     Host_Init();

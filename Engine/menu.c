@@ -1236,12 +1236,12 @@ const char *bindnames[][2] = {
     {"impulse 12",		"prev weapon"},
     {"+jump",		"jump / swim up"},
     {"+forward",		"walk forward"},
-    {"+back",		"backpedal"},
+    {"+back",		"walk backwards"},
     {"+left",		"turn left"},
     {"+right",		"turn right"},
     {"+speed",		"run"},
-    {"+moveleft",		"step left"},
-    {"+moveright",		"step right"},
+    {"+moveleft",		"Move left"},
+    {"+moveright",		"Move right"},
     {"+strafe",		"sidestep"},
     {"+lookup",		"look up"},
     {"+lookdown",		"look down"},
@@ -1249,7 +1249,8 @@ const char *bindnames[][2] = {
     {"+mlook",		"mouse look"},
     {"+klook",		"keyboard look"},
     {"+moveup",		"swim up"},
-    {"+movedown",		"swim down"}
+    {"+movedown",		"swim down"},
+    {"impulse 30",  "Flashlight"}
 };
 
 #define	NUMCOMMANDS	(sizeof(bindnames)/sizeof(bindnames[0]))
@@ -1555,7 +1556,7 @@ void M_Quit_Draw (void) { //johnfitz -- modified for new quit message
         m_state = m_quit;
     }
 
-    sprintf(msg1, "Allotropy %1.2f.%d", (float)DARWIN_VERSION, DARWIN_VERSION_PATCH);
+    sprintf(msg1, "Allotropy [ALPHA] %1.2f.%d", (float)DARWIN_VERSION, DARWIN_VERSION_PATCH);
 
     //okay, this is kind of fucked up.  M_DrawTextBox will always act as if
     //width is even. Also, the width and lines values are for the interior of the box,

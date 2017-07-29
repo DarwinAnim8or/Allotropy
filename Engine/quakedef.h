@@ -39,8 +39,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #define	FITZQUAKE_VERSION	0.85	//johnfitz
 #define	QUAKESPASM_VERSION	0.92
 #define	QUAKESPASM_VER_PATCH	1	// helper to print a string like 0.92.1
-#define DARWIN_VERSION 0.12
-#define DARWIN_VERSION_PATCH 5
+#define DARWIN_VERSION 0.14
+#define DARWIN_VERSION_PATCH 2
 
 //define	PARANOID			// speed sapping error checking
 
