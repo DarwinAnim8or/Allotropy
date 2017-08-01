@@ -59,6 +59,7 @@ cvar_t	v_ipitch_level = {"v_ipitch_level", "0.3", CVAR_NONE};
 cvar_t	v_idlescale = {"v_idlescale", "0", CVAR_NONE};
 
 cvar_t	crosshair = {"crosshair", "0", CVAR_ARCHIVE};
+cvar_t  crosshaircolor = {"crosshaircolor", "79", CVAR_ARCHIVE};
 
 cvar_t	gl_cshiftpercent = {"gl_cshiftpercent", "100", CVAR_NONE};
 

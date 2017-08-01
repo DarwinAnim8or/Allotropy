@@ -101,6 +101,7 @@ cvar_t		scr_printspeed = {"scr_printspeed","8",CVAR_NONE};
 cvar_t		gl_triplebuffer = {"gl_triplebuffer", "1", CVAR_ARCHIVE};
 
 extern	cvar_t	crosshair;
+extern  cvar_t  crosshaircolor;
 
 qboolean	scr_initialized;		// ready to draw
 
@@ -638,6 +639,10 @@ void SCR_DrawCrosshair (void) {
         return;
 
     GL_SetCanvas (CANVAS_CROSSHAIR);
+
+    //if (!crosshaircolor.value)
+        //glColor3f(0.0f, 255.0f, 0.0f);
+
     Draw_Character (-4, -4, '+'); //0,0 is center of viewport
 }
 

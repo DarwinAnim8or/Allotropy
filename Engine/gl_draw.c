@@ -684,6 +684,7 @@ void GL_SetCanvas (canvastype newcanvas) {
         break;
     case CANVAS_CROSSHAIR: //0,0 is center of viewport
         s = CLAMP (1.0, scr_crosshairscale.value, 10.0);
+        glColor3f(255.0f, 0.0f, 0.0f);
         glOrtho (scr_vrect.width/-2/s, scr_vrect.width/2/s, scr_vrect.height/2/s, scr_vrect.height/-2/s, -99999, 99999);
         glViewport (scr_vrect.x, glheight - scr_vrect.y - scr_vrect.height, scr_vrect.width & ~1, scr_vrect.height & ~1);
         break;

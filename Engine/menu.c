@@ -246,7 +246,8 @@ void M_Main_Draw (void) {
 
     f = (int)(realtime * 10)%6;
 
-    M_DrawTransPic (54, 32 + m_main_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
+    //M_DrawTransPic (54, 32 + m_main_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
+    M_DrawTransPic (54, 32 + m_main_cursor * 20,Draw_CachePic( va("gui/menudot1.lmp" ) ) ); //GieV: removed rotating menudot
 }
 
 
@@ -331,7 +332,8 @@ void M_SinglePlayer_Draw (void) {
 
     f = (int)(realtime * 10)%6;
 
-    M_DrawTransPic (54, 32 + m_singleplayer_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
+    //M_DrawTransPic (54, 32 + m_singleplayer_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
+    M_DrawTransPic (54, 32 + m_singleplayer_cursor * 20,Draw_CachePic( va("gui/menudot1.lmp" ) ) ); //GieV: removed rotating menudot
 }
 
 
@@ -581,7 +583,8 @@ void M_MultiPlayer_Draw (void) {
 
     f = (int)(realtime * 10)%6;
 
-    M_DrawTransPic (54, 32 + m_multiplayer_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
+    //M_DrawTransPic (54, 32 + m_multiplayer_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
+    M_DrawTransPic (54, 32 + m_multiplayer_cursor * 20,Draw_CachePic( va("gui/menudot1.lmp" ) ) ); //GieV: removed rotating menudot
 
     if (ipxAvailable || tcpipAvailable)
         return;
@@ -871,7 +874,8 @@ void M_Net_Draw (void) {
     M_Print (f, 128, net_helpMessage[m_net_cursor*4+3]);
 
     f = (int)(realtime * 10)%6;
-    M_DrawTransPic (54, 32 + m_net_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
+    //M_DrawTransPic (54, 32 + m_net_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
+    M_DrawTransPic (54, 32 + m_net_cursor * 20,Draw_CachePic( va("gui/menudot1.lmp" ) ) ); //GieV: removed rotating menudot
 }
 
 

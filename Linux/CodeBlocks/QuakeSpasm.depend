@@ -1869,7 +1869,7 @@
 	"snd_codec.h"
 	"bgmusic.h"
 
-1501343636 /home/darwin/Projects/Allotropy/Engine/quakedef.h
+1501592039 /home/darwin/Projects/Allotropy/Engine/quakedef.h
 	"q_stdinc.h"
 	"common.h"
 	"bspfile.h"
@@ -1969,7 +1969,7 @@
 
 1500486506 /home/darwin/Projects/Allotropy/Engine/screen.h
 
-1500486506 /home/darwin/Projects/Allotropy/Engine/draw.h
+1501422096 /home/darwin/Projects/Allotropy/Engine/draw.h
 
 1500486771 /home/darwin/Projects/Allotropy/Engine/render.h
 
@@ -2087,7 +2087,7 @@
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/cvar.c
 	"quakedef.h"
 
-1500926943 source:/home/darwin/Projects/Allotropy/Engine/gl_draw.c
+1501423359 source:/home/darwin/Projects/Allotropy/Engine/gl_draw.c
 	"quakedef.h"
 
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_fog.c
@@ -2111,7 +2111,7 @@
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_rmisc.c
 	"quakedef.h"
 
-1501343609 source:/home/darwin/Projects/Allotropy/Engine/gl_screen.c
+1501422378 source:/home/darwin/Projects/Allotropy/Engine/gl_screen.c
 	"quakedef.h"
 
 1500926942 source:/home/darwin/Projects/Allotropy/Engine/gl_sky.c
@@ -2178,7 +2178,7 @@
 1500486505 source:/home/darwin/Projects/Allotropy/Engine/mathlib.c
 	"quakedef.h"
 
-1501337905 source:/home/darwin/Projects/Allotropy/Engine/menu.c
+1501427202 source:/home/darwin/Projects/Allotropy/Engine/menu.c
 	"quakedef.h"
 	"bgmusic.h"
 
@@ -2447,7 +2447,7 @@
 	<sys/sysctl.h>
 	<sys/mpctl.h>
 
-1500486506 source:/home/darwin/Projects/Allotropy/Engine/view.c
+1501422090 source:/home/darwin/Projects/Allotropy/Engine/view.c
 	"quakedef.h"
 
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/wad.c
