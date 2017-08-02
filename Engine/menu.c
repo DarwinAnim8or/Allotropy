@@ -1622,9 +1622,9 @@ void M_LanConfig_Draw (void) {
         startJoin = "New Game";
     else
         startJoin = "Join Game";
-    if (IPXConfig)
+    /*if (IPXConfig)
         protocol = "IPX";
-    else
+    else*/
         protocol = "TCP/IP";
     M_Print (basex, 32, va ("%s - %s", startJoin, protocol));
     basex += 8;
@@ -1668,7 +1668,8 @@ void M_LanConfig_Key (int key) {
     switch (key) {
     case K_ESCAPE:
     case K_BBUTTON:
-        M_Menu_Net_f ();
+        //M_Menu_Net_f (); //GieV: This would cause a loop where the player won't be able to exit the LanConfig menu.
+        M_Menu_MultiPlayer_f ();
         break;
 
     case K_UPARROW:

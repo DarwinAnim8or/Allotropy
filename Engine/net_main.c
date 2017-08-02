@@ -34,7 +34,7 @@ qboolean	ipxAvailable = false;
 qboolean	tcpipAvailable = false;
 
 int		net_hostport;
-int		DEFAULTnet_hostport = 26000;
+int		DEFAULTnet_hostport = 23353;
 
 char		my_ipx_address[NET_NAMELEN];
 char		my_tcpip_address[NET_NAMELEN];
