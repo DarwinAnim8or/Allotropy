@@ -259,7 +259,7 @@ static void PrintSlistTrailer(void) {
     if (hostCacheCount)
         Con_Printf("== end list ==\n\n");
     else
-        Con_Printf("No Quake servers found.\n\n");
+        Con_Printf("No servers found.\n\n");
 }
 
 
@@ -268,7 +268,7 @@ void NET_Slist_f (void) {
         return;
 
     if (! slistSilent) {
-        Con_Printf("Looking for Quake servers...\n");
+        Con_Printf("Looking for servers...\n");
         PrintSlistHeader();
     }
 
