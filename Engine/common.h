@@ -279,5 +279,8 @@ extern qboolean		standard_quake, rogue, hipnotic;
 extern qboolean		fitzmode;
 /* if true, run in fitzquake mode disabling custom quakespasm hacks */
 
+//GieV: Needed for WAD3 loading.
+void Q_strncpyz (char *dest, char *src, size_t size);
+
 #endif	/* _Q_COMMON_H */
 

@@ -929,7 +929,12 @@ void SV_Physics_Client (edict_t	*ent, int num) {
 //
 // call standard player post-think
 //
-    SV_LinkEdict (ent, true);
+    //SV_LinkEdict (ent, true);
+
+    //GieV: TODO: Make a seperate command to toggle between noclip with triggers and without triggers.
+    if (ent->v.movetype == MOVETYPE_NOCLIP)
+       SV_LinkEdict (ent, false);
+    else SV_LinkEdict (ent, true);
 
     pr_global_struct->time = sv.time;
     pr_global_struct->self = EDICT_TO_PROG(ent);

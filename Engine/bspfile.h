@@ -57,8 +57,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 //=============================================================================
 
-
-#define BSPVERSION	29
+//GieV: Updated this to be able to tell the difference between Q1 and HL BSPs.
+#define Q1_BSPVERSION	29
+#define HL_BSPVERSION   30
 
 /* RMQ support (2PSB). 32bits instead of shorts for all but bbox sizes (which
  * still use shorts) */

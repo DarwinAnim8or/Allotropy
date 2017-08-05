@@ -77,5 +77,9 @@ void	*W_GetLumpNum (int num);
 
 void SwapPic (qpic_t *pic);
 
+//GieV: WAD3 loading support:
+void WAD3_LoadTextureWadFile (char *filename);
+byte *WAD3_LoadTexture(miptex_t *mt);
+
 #endif	/* _QUAKE_WAD_H */
 

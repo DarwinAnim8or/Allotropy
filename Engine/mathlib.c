@@ -476,3 +476,9 @@ fixed16_t Invert24To16(fixed16_t val) {
            (((double)0x10000 * (double)0x1000000 / (double)val) + 0.5);
 }
 
+
+#define Q_ROUND_POWER2(in, out) {						\
+	_mathlib_temp_int1 = in;							\
+	for (out = 1; out < _mathlib_temp_int1; out <<= 1)	\
+	;												\
+}

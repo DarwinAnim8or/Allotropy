@@ -340,6 +340,13 @@ qmodel_t *Mod_ForName (const char *name, qboolean crash) {
 ===============================================================================
 */
 
+#define ISTURBTEX(name)		((loadmodel->bspversion == Q1_BSPVERSION && (name)[0] == '*') ||	\
+							 (loadmodel->bspversion == HL_BSPVERSION && (name)[0] == '!'))
+
+#define ISSKYTEX(name)		((name)[0] == 's' && (name)[1] == 'k' && (name)[2] == 'y')
+
+#define ISALPHATEX(name)	(loadmodel->bspversion == HL_BSPVERSION && (name)[0] == '{')
+
 byte	*mod_base;
 
 /*
@@ -360,6 +367,7 @@ qboolean Mod_CheckFullbrights (byte *pixels, int count) {
 Mod_LoadTextures
 =================
 */
+qboolean hl_map;
 void Mod_LoadTextures (lump_t *l) {
     int		i, j, pixels, num, maxanim, altmax;
     miptex_t	*mt;
@@ -430,10 +438,11 @@ void Mod_LoadTextures (lump_t *l) {
         tx->fullbright = NULL; //johnfitz
 
         //johnfitz -- lots of changes
+        //GieV: updated to support HL BSP textures.
         if (!isDedicated) { //no texture uploading for dedicated server
-            if (!q_strncasecmp(tx->name,"sky",3)) //sky texture //also note -- was Q_strncmp, changed to match qbsp
+            if (loadmodel->bspversion == Q1_BSPVERSION && !q_strncasecmp(tx->name,"sky",3)) //sky texture //also note -- was Q_strncmp, changed to match qbsp
                 Sky_LoadTexture (tx);
-            else if (tx->name[0] == '*') { //warping texture
+            else if ((loadmodel->bspversion == Q1_BSPVERSION && tx->name[0] == '*') || (loadmodel->bspversion == HL_BSPVERSION && tx->name[0] == '!')) { //warping texture
                 //external textures -- first look in "textures/mapname/" then look in "textures/"
                 mark = Hunk_LowMark();
                 COM_StripExtension (loadmodel->name + 5, mapname, sizeof(mapname));
@@ -502,15 +511,33 @@ void Mod_LoadTextures (lump_t *l) {
                 } else { //use the texture from the bsp file
                     q_snprintf (texturename, sizeof(texturename), "%s:%s", loadmodel->name, tx->name);
                     offset = (src_offset_t)(mt+1) - (src_offset_t)mod_base;
-                    if (Mod_CheckFullbrights ((byte *)(tx+1), pixels)) {
+                    if (loadmodel->bspversion == Q1_BSPVERSION && Mod_CheckFullbrights ((byte *)(tx+1), pixels)) {
                         tx->gltexture = TexMgr_LoadImage (loadmodel, texturename, tx->width, tx->height,
                                                           SRC_INDEXED, (byte *)(tx+1), loadmodel->name, offset, TEXPREF_MIPMAP | TEXPREF_NOBRIGHT | extraflags);
                         q_snprintf (texturename, sizeof(texturename), "%s:%s_glow", loadmodel->name, tx->name);
                         tx->fullbright = TexMgr_LoadImage (loadmodel, texturename, tx->width, tx->height,
                                                            SRC_INDEXED, (byte *)(tx+1), loadmodel->name, offset, TEXPREF_MIPMAP | TEXPREF_FULLBRIGHT | extraflags);
                     } else {
-                        tx->gltexture = TexMgr_LoadImage (loadmodel, texturename, tx->width, tx->height,
-                                                          SRC_INDEXED, (byte *)(tx+1), loadmodel->name, offset, TEXPREF_MIPMAP | extraflags);
+                        if (loadmodel->bspversion == HL_BSPVERSION) {
+                            byte* data;
+                            hl_map = true;
+
+                            if (tx->name[0] == '{') {
+                                tx->transparent = true;
+                            }
+
+                            if ((data = WAD3_LoadTexture(mt))) {
+                                if (tx->transparent) {
+                                    tx->gltexture = TexMgr_LoadImage (loadmodel, texturename, tx->width, tx->height, SRC_RGBA, data, loadmodel->name, offset, TEXPREF_ALPHA);
+                                } else {
+                                    tx->gltexture = TexMgr_LoadImage (loadmodel, texturename, tx->width, tx->height, SRC_RGBA, data, loadmodel->name, offset, TEXPREF_NONE | extraflags);
+                                }
+                            }
+
+							free(data);
+                        } else { //Q1 BSP, use the normal method:
+                            tx->gltexture = TexMgr_LoadImage (loadmodel, texturename, tx->width, tx->height, SRC_INDEXED, (byte *)(tx+1), loadmodel->name, offset, TEXPREF_MIPMAP | extraflags);
+                        }
                     }
                 }
                 Hunk_FreeToLowMark (mark);
@@ -616,6 +643,13 @@ void Mod_LoadLighting (lump_t *l) {
     byte d;
     char litfilename[MAX_OSPATH];
     unsigned int path_id;
+
+    if (loadmodel->bspversion == HL_BSPVERSION) {
+		loadmodel->lightdata = Hunk_AllocName(l->filelen, litfilename);
+		Con_Printf ("lighting data at %i with length\n", mod_base + l->fileofs, l->filelen);
+		memcpy (loadmodel->lightdata, mod_base + l->fileofs, l->filelen);
+		return;
+	}
 
     loadmodel->lightdata = NULL;
     // LordHavoc: check for a .lit file
@@ -731,7 +765,7 @@ void Mod_LoadVertexes (lump_t *l) {
 
     in = (dvertex_t *)(mod_base + l->fileofs);
     if (l->filelen % sizeof(*in))
-        Sys_Error ("MOD_LoadBmodel: funny lump size in %s",loadmodel->name);
+        Sys_Error ("MOD_LoadBmodel:Mod_LoadVertexes: funny lump size in %s",loadmodel->name);
     count = l->filelen / sizeof(*in);
     out = (mvertex_t *) Hunk_AllocName ( count*sizeof(*out), loadname);
 
@@ -758,7 +792,7 @@ void Mod_LoadEdges (lump_t *l, int bsp2) {
         dledge_t *in = (dledge_t *)(mod_base + l->fileofs);
 
         if (l->filelen % sizeof(*in))
-            Sys_Error ("MOD_LoadBmodel: funny lump size in %s",loadmodel->name);
+            Sys_Error ("MOD_LoadBmodel:Mod_LoadEdges: funny lump size in %s",loadmodel->name);
 
         count = l->filelen / sizeof(*in);
         out = (medge_t *) Hunk_AllocName ( (count + 1) * sizeof(*out), loadname);
@@ -774,7 +808,7 @@ void Mod_LoadEdges (lump_t *l, int bsp2) {
         dsedge_t *in = (dsedge_t *)(mod_base + l->fileofs);
 
         if (l->filelen % sizeof(*in))
-            Sys_Error ("MOD_LoadBmodel: funny lump size in %s",loadmodel->name);
+            Sys_Error ("MOD_LoadBmodel:Mod_LoadEdges:2: funny lump size in %s",loadmodel->name);
 
         count = l->filelen / sizeof(*in);
         out = (medge_t *) Hunk_AllocName ( (count + 1) * sizeof(*out), loadname);
@@ -803,7 +837,7 @@ void Mod_LoadTexinfo (lump_t *l) {
 
     in = (texinfo_t *)(mod_base + l->fileofs);
     if (l->filelen % sizeof(*in))
-        Sys_Error ("MOD_LoadBmodel: funny lump size in %s",loadmodel->name);
+        Sys_Error ("MOD_LoadBmodel:Mod_LoadTexinfo: funny lump size in %s",loadmodel->name);
     count = l->filelen / sizeof(*in);
     out = (mtexinfo_t *) Hunk_AllocName ( count*sizeof(*out), loadname);
 
@@ -1017,13 +1051,13 @@ void Mod_LoadFaces (lump_t *l, qboolean bsp2) {
         ins = NULL;
         inl = (dlface_t *)(mod_base + l->fileofs);
         if (l->filelen % sizeof(*inl))
-            Sys_Error ("MOD_LoadBmodel: funny lump size in %s",loadmodel->name);
+            Sys_Error ("MOD_LoadBmodel:Mod_LoadFaces: funny lump size in %s",loadmodel->name);
         count = l->filelen / sizeof(*inl);
     } else {
         ins = (dsface_t *)(mod_base + l->fileofs);
         inl = NULL;
         if (l->filelen % sizeof(*ins))
-            Sys_Error ("MOD_LoadBmodel: funny lump size in %s",loadmodel->name);
+            Sys_Error ("MOD_LoadBmodel:Mod_LoadFaces:2: funny lump size in %s",loadmodel->name);
         count = l->filelen / sizeof(*ins);
     }
     out = (msurface_t *)Hunk_AllocName ( count*sizeof(*out), loadname);
@@ -1073,10 +1107,15 @@ void Mod_LoadFaces (lump_t *l, qboolean bsp2) {
         Mod_CalcSurfaceBounds (out); //johnfitz -- for per-surface frustum culling
 
         // lighting info
-        if (lofs == -1)
+        if (lofs == -1) {
             out->samples = NULL;
-        else
-            out->samples = loadmodel->lightdata + (lofs * 3); //johnfitz -- lit support via lordhavoc (was "+ i")
+        } else {
+            if (loadmodel->bspversion == HL_BSPVERSION) {
+                out->samples = loadmodel->lightdata + lofs;
+            } else {
+                out->samples = loadmodel->lightdata + (lofs * 3); //johnfitz -- lit support via lordhavoc (was "+ i")
+            }
+        }
 
         //johnfitz -- this section rewritten
         if (!q_strncasecmp(out->texinfo->texture->name,"sky",3)) { // sky surface //also note -- was Q_strncmp, changed to match qbsp
@@ -1801,7 +1840,7 @@ void Mod_LoadBrushModel (qmodel_t *mod, void *buffer) {
     mod->bspversion = LittleLong (header->version);
 
     switch(mod->bspversion) {
-    case BSPVERSION:
+    case Q1_BSPVERSION:
         bsp2 = false;
         break;
     case BSP2VERSION_2PSB:
@@ -1810,8 +1849,11 @@ void Mod_LoadBrushModel (qmodel_t *mod, void *buffer) {
     case BSP2VERSION_BSP2:
         bsp2 = 2;	//sanitised revision
         break;
+    case HL_BSPVERSION:
+        bsp2 = false;
+        break; //GieV: So that the engine won't complain about the version number of the HL BSPs.
     default:
-        Sys_Error ("Mod_LoadBrushModel: %s has wrong version number (%i should be %i)", mod->name, mod->bspversion, BSPVERSION);
+        Sys_Error ("Mod_LoadBrushModel: %s has wrong version number (%i should be %i (Quake) OR %i (HL))", mod->name, mod->bspversion, Q1_BSPVERSION, HL_BSPVERSION);
         break;
     }
 

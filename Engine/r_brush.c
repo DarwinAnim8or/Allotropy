@@ -461,6 +461,7 @@ fullbrights:
 R_DrawBrushModel
 =================
 */
+extern qboolean hl_map;
 void R_DrawBrushModel (entity_t *e) {
     int			i, k;
     msurface_t	*psurf;
@@ -473,6 +474,11 @@ void R_DrawBrushModel (entity_t *e) {
 
     currententity = e;
     clmodel = e->model;
+
+    if (hl_map) {
+        glColor4f(1, 1, 1, 1);
+        glEnable(GL_ALPHA_TEST);
+    }
 
     VectorSubtract (r_refdef.vieworg, e->origin, modelorg);
     if (e->angles[0] || e->angles[1] || e->angles[2]) {

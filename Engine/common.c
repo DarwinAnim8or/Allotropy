@@ -1315,7 +1315,7 @@ typedef struct {
     int		dirlen;
 } dpackheader_t;
 
-#define MAX_FILES_IN_PACK	2048
+#define MAX_FILES_IN_PACK   4096 //GieV: Increased for HL support, was 2048.
 
 char	com_gamedir[MAX_OSPATH];
 char	com_basedir[MAX_OSPATH];
@@ -2146,3 +2146,8 @@ long FS_filelength (fshandle_t *fh) {
     return fh->length;
 }
 
+//GieV: implementation for Q_strncpyz
+void Q_strncpyz (char *dest, char *src, size_t size) {
+    strncpy (dest, src, size - 1);
+    dest[size-1] = 0;
+}

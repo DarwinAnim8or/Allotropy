@@ -310,6 +310,8 @@ static void VID_Gamma_Init (void) {
 
     if (!gammaworks)
         Con_SafePrintf("gamma adjustment not available\n");
+
+    Build_Gamma_Table(); //GieV: Build the gamma table for HL BSPs.
 }
 
 /*

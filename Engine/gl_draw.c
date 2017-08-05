@@ -100,6 +100,8 @@ typedef struct {
     float		sl, tl, sh, th;
 } glpic_t;
 
+int			texture_extension_number = 1; //GieV: Testing...
+
 canvastype currentcanvas = CANVAS_NONE; //johnfitz -- for GL_SetCanvas
 
 //==============================================================================
@@ -725,4 +727,170 @@ void GL_Set2D (void) {
     glDisable (GL_BLEND);
     glEnable (GL_ALPHA_TEST);
     glColor4f (1,1,1,1);
+}
+
+//
+// Uploads a 32-bit texture to OpenGL. Makes sure it's the correct size and creates mipmaps if requested.
+//
+static void GL_Upload32 (unsigned *data, int width, int height, int mode) {
+    int	internal_format, tempwidth, tempheight, miplevel;
+    unsigned int *newdata;
+
+    //if (GL_AARB) {
+       // tempwidth = width;
+      //  tempheight = height;
+    //} else {
+        powerof2(width); powerof2(tempwidth);
+        powerof2(height); powerof2(tempheight);
+    //}
+
+    newdata = (unsigned int *) malloc(tempwidth * tempheight * 4);
+
+    // Resample the image if it's not scaled to the power of 2,
+    // we take care of this when drawing using the texture coordinates.
+   /* if (width < tempwidth || height < tempheight) {
+        Image_Resample (data, width, height, newdata, tempwidth, tempheight, 4, !!gl_lerpimages.value);
+        width = tempwidth;
+        height = tempheight;
+    } else {*/
+        // Scale is a power of 2, just copy the data.
+        memcpy (newdata, data, width * height * 4);
+    //}
+
+    /*if ((mode & fullbrightTexLoc) && (mode & TEX_LUMA) && gl_wicked_luma_level.integer > 0) {
+        int i, cnt = width * height * 4, level = gl_wicked_luma_level.integer;
+        byte *bdata = (byte*)newdata;
+
+        for (i = 0; i < cnt; i += 4) {
+            if (bdata[i] < level && bdata[i+1] < level && bdata[i+2] < level)
+                bdata[i+3] = 0; // make black pixels transparent, well not always black, depends of level...
+        }
+    }*/
+
+    // Get the scaled dimension (scales according to gl_picmip and max allowed texture size).
+   // ScaleDimensions(width, height, &tempwidth, &tempheight, mode);
+
+    // If the image size is bigger than the max allowed size or
+    // set picmip value we calculate it's next closest mip map.
+   // while (width > tempwidth || height > tempheight)
+     //   Image_MipReduce ((byte *) newdata, (byte *) newdata, &width, &height, 4);
+
+    //if (mode & TEX_BRIGHTEN)
+      //  brighten32 ((byte *)newdata, width * height * 4);
+
+   /* if(gl_gammacorrection.integer) {
+        internal_format = (mode & TEX_ALPHA) ? GL_SRGB8_ALPHA8 : GL_SRGB8;
+    } else if(mode & TEX_NOCOMPRESS) {
+        internal_format = (mode & TEX_ALPHA) ? 4 : 3;
+    } else {
+        internal_format = (mode & TEX_ALPHA) ? gl_alpha_format : gl_solid_format;
+    }*/
+
+    // Upload the main texture to OpenGL.
+    miplevel = 0;
+    glTexImage2D (GL_TEXTURE_2D, 0, internal_format, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, newdata);
+
+   /* if (mode & TEX_MIPMAP) {
+        // Calculate the mip maps for the images.
+        while (width > 1 || height > 1) {
+            Image_MipReduce ((byte *) newdata, (byte *) newdata, &width, &height, 4);
+            miplevel++;
+            glTexImage2D (GL_TEXTURE_2D, miplevel, internal_format, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, newdata);
+        }
+
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, gl_filter_min);
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, gl_filter_max);
+
+        if (anisotropy_ext)
+            glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, anisotropy_tap);
+    } else {*/
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+//    }
+
+    free(newdata);
+}
+
+//GieV: Build the gamma table for the texture, otherwise the colours look fullbright-y
+byte      vid_gamma_table[256];
+void Build_Gamma_Table (void) {
+    int      i;
+    float      inf;
+    float   in_gamma;
+
+    if ((i = COM_CheckParm("-gamma")) != 0 && i+1 < com_argc) {
+        in_gamma = Q_atof(com_argv[i+1]);
+        if (in_gamma < 0.3) in_gamma = 0.3;
+        if (in_gamma > 1) in_gamma = 1.0;
+    } else {
+        in_gamma = 1;
+    }
+
+    if (in_gamma != 1) {
+        for (i=0 ; i<256 ; i++) {
+            inf = MIN(255 * pow((i + 0.5) / 255.5, in_gamma) + 0.5, 255);
+            vid_gamma_table[i] = inf;
+        }
+    } else {
+        for (i=0 ; i<256 ; i++)
+            vid_gamma_table[i] = i;
+    }
+
+}
+
+/*
+================
+GL_LoadTexture32
+GieV: This is to load in textures without the engine forcing the palette
+================
+*/
+int GL_LoadTexture32 (char *identifier, int width, int height, byte *data, qboolean mipmap, qboolean alpha) {
+    qboolean   noalpha;
+    int         i, p, s;
+    gltexture_t   *glt;
+    int image_size = width * height;
+
+    static gltexture_t	gltextures[32];
+	static int			numgltextures = 0;
+
+    // see if the texture is already present
+    if (identifier[0]) {
+        for (i=0, glt=gltextures ; i<numgltextures ; i++, glt++) {
+            if (!strcmp (identifier, glt->texnum)) {
+                if (width != glt->width || height != glt->height)
+                    Sys_Error ("GL_LoadTexture: cache mismatch");
+                return gltextures[i].texnum;
+            }
+        }
+    } else {
+        glt = &gltextures[numgltextures];
+        numgltextures++;
+    }
+
+    strcpy (glt->texnum, identifier);
+    glt->texnum = texture_extension_number;
+    glt->width = width;
+    glt->height = height;
+    //glt->mipmap = mipmap;
+
+    GL_Bind(texture_extension_number);
+
+#if 1
+    // Baker: this applies our -gamma parameter table
+    if (1) {
+        //extern   byte   vid_gamma_table[256];
+        for (i = 0; i < image_size; i++) {
+            data[4 * i] = vid_gamma_table[data[4 * i]];
+            data[4 * i + 1] = vid_gamma_table[data[4 * i + 1]];
+            data[4 * i + 2] = vid_gamma_table[data[4 * i + 2]];
+        }
+    }
+#endif
+
+    GL_Upload32((unsigned *)data, width, height, 1);
+    //TexMgr_LoadImage32(glt, (unsigned*)data);
+
+    texture_extension_number++;
+
+    return texture_extension_number-1;
 }
