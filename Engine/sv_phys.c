@@ -48,6 +48,7 @@ cvar_t	sv_gravity = {"sv_gravity","800",CVAR_NOTIFY|CVAR_SERVERINFO};
 cvar_t	sv_maxvelocity = {"sv_maxvelocity","2000",CVAR_NONE};
 cvar_t	sv_nostep = {"sv_nostep","0",CVAR_NONE};
 cvar_t	sv_freezenonclients = {"sv_freezenonclients","0",CVAR_NONE};
+cvar_t  sv_fixbounceyslopes = {"sv_fixbounceyslopes", "0", CVAR_NOTIFY|CVAR_SERVERINFO};
 
 
 #define	MOVE_EPSILON	0.01
@@ -1061,9 +1062,19 @@ void SV_Physics_Toss (edict_t *ent) {
 
     ClipVelocity (ent->v.velocity, trace.plane.normal, ent->v.velocity, backoff);
 
-// stop if on ground
+    //GieV: Rewritten by Baker
+    // stop if on ground
     if (trace.plane.normal[2] > 0.7) {
-        if (ent->v.velocity[2] < 60 || ent->v.movetype != MOVETYPE_BOUNCE) {
+        int stop_moving = false;
+        if (!sv_fixbounceyslopes.value) {
+            if (DotProduct(trace.plane.normal, ent->v.velocity) < 30)
+                stop_moving = true;
+        } else {
+            if (ent->v.velocity[2] < 60 || ent->v.movetype != MOVETYPE_BOUNCE)
+                stop_moving = true;
+        }
+
+        if (stop_moving) {
             ent->v.flags = (int)ent->v.flags | FL_ONGROUND;
             ent->v.groundentity = EDICT_TO_PROG(trace.ent);
             VectorCopy (vec3_origin, ent->v.velocity);
