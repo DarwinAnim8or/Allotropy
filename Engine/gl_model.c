@@ -278,9 +278,29 @@ qmodel_t *Mod_LoadModel (qmodel_t *mod, qboolean crash) {
 // load the file
 //
     buf = COM_LoadStackFile (mod->name, stackbuf, sizeof(stackbuf), & mod->path_id);
-    if (!buf) {
-        if (crash)
-            Sys_Error ("Mod_LoadModel: %s not found", mod->name); //johnfitz -- was "Mod_NumForName"
+
+    #if SUBST_MISSING_MODELS
+        if (!buf && crash) {
+            //Substitute with another MDL:
+            buf = (unsigned*)COM_LoadStackFile("error_model.mdl", stackbuf, sizeof(stackbuf), &mod->path_id);
+
+            if (buf) {
+                Con_Printf("Missing model %s substituted with error_model.mdl.\n", mod->name);
+            }
+        }
+    #endif
+
+   if (!buf) {
+        if (crash) {
+            //Sys_Error ("Mod_LoadModel: %s not found", mod->name); //johnfitz -- was "Md_NumForName"
+
+            //Substitute with another MDL:
+            buf = buf = COM_LoadStackFile ("error_model.mdl", stackbuf, sizeof(stackbuf), & mod->path_id);
+
+            if (buf) {
+                Con_Printf("Missing model %s substituted with error_model.mdl.\n", mod->name);
+            }
+        }
         return NULL;
     }
 

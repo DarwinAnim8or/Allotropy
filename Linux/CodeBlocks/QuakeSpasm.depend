@@ -1869,7 +1869,7 @@
 	"snd_codec.h"
 	"bgmusic.h"
 
-1501896267 /home/darwin/Projects/Allotropy/Engine/quakedef.h
+1501931336 /home/darwin/Projects/Allotropy/Engine/quakedef.h
 	"q_stdinc.h"
 	"common.h"
 	"bspfile.h"
@@ -2054,7 +2054,7 @@
 	"quakedef.h"
 	"bgmusic.h"
 
-1500486507 source:/home/darwin/Projects/Allotropy/Engine/cl_parse.c
+1501932704 source:/home/darwin/Projects/Allotropy/Engine/cl_parse.c
 	"quakedef.h"
 	"bgmusic.h"
 
@@ -2096,7 +2096,7 @@
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_mesh.c
 	"quakedef.h"
 
-1501895893 source:/home/darwin/Projects/Allotropy/Engine/gl_model.c
+1501932523 source:/home/darwin/Projects/Allotropy/Engine/gl_model.c
 	"quakedef.h"
 
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_refrag.c
@@ -2105,7 +2105,7 @@
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_rlight.c
 	"quakedef.h"
 
-1501091547 source:/home/darwin/Projects/Allotropy/Engine/gl_rmain.c
+1501931947 source:/home/darwin/Projects/Allotropy/Engine/gl_rmain.c
 	"quakedef.h"
 
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_rmisc.c

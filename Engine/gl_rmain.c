@@ -613,6 +613,37 @@ void R_DrawEntitiesOnList (qboolean alphapass) { //johnfitz -- added parameter
 
 /*
 =============
+R_DrawNullModel
+=============
+*/
+void R_DrawNullModel(entity_t *e) {
+    int i;
+
+    glPushMatrix();
+    R_RotateForEntity (e->origin, e->angles);
+
+    glDisable(GL_TEXTURE_2D);
+    glColor3f(1, 0, 1);
+
+    glBegin(GL_TRIANGLE_FAN);
+    glVertex3f(0, 0, -8);
+    for (i = 0; i <= 4; i++)
+        glVertex3f(8 * cos(i * M_PI * 0.5f), 8 * sin(i * M_PI * 0.5f), 0);
+    glEnd();
+
+    glBegin(GL_TRIANGLE_FAN);
+    glVertex3f(0, 0, 8);
+    for (i = 4; i >= 0; i--)
+        glVertex3f(8 * cos(i * M_PI * 0.5f), 8 * sin(i * M_PI * 0.5f), 0);
+    glEnd();
+
+    glColor3f(1, 1, 1);
+    glPopMatrix();
+    glEnable(GL_TEXTURE_2D);
+}
+
+/*
+=============
 R_DrawViewModel -- johnfitz -- gutted
 =============
 */
@@ -624,8 +655,10 @@ void R_DrawViewModel (void) {
         return;
 
     currententity = &cl.viewent;
-    if (!currententity->model)
+    if (!currententity->model) {
+        R_DrawNullModel(currententity);
         return;
+    }
 
     //johnfitz -- this fixes a crash
     if (currententity->model->type != mod_alias)
