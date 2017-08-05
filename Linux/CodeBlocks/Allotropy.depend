@@ -1869,7 +1869,7 @@
 	"snd_codec.h"
 	"bgmusic.h"
 
-1501931336 /home/darwin/Projects/Allotropy/Engine/quakedef.h
+1501946103 /home/darwin/Projects/Allotropy/Engine/quakedef.h
 	"q_stdinc.h"
 	"common.h"
 	"bspfile.h"
@@ -2018,7 +2018,7 @@
 
 1500486506 /home/darwin/Projects/Allotropy/Engine/keys.h
 
-1500486506 /home/darwin/Projects/Allotropy/Engine/menu.h
+1501945803 /home/darwin/Projects/Allotropy/Engine/menu.h
 
 1500486506 /home/darwin/Projects/Allotropy/Engine/cdaudio.h
 
@@ -2178,9 +2178,10 @@
 1501874311 source:/home/darwin/Projects/Allotropy/Engine/mathlib.c
 	"quakedef.h"
 
-1501703851 source:/home/darwin/Projects/Allotropy/Engine/menu.c
+1501962793 source:/home/darwin/Projects/Allotropy/Engine/menu.c
 	"quakedef.h"
 	"bgmusic.h"
+	<dirent.h>
 
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/net_bsd.c
 	"q_stdinc.h"
@@ -2422,7 +2423,7 @@
 1500486505 source:/home/darwin/Projects/Allotropy/Engine/sv_move.c
 	"quakedef.h"
 
-1501933453 source:/home/darwin/Projects/Allotropy/Engine/sv_phys.c
+1501934165 source:/home/darwin/Projects/Allotropy/Engine/sv_phys.c
 	"quakedef.h"
 
 1500486507 source:/home/darwin/Projects/Allotropy/Engine/sv_user.c

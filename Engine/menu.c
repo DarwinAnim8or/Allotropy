@@ -586,7 +586,7 @@ void M_MultiPlayer_Draw (void) {
     //M_DrawTransPic (54, 32 + m_multiplayer_cursor * 20,Draw_CachePic( va("gui/menudot%i.lmp", f+1 ) ) );
     M_DrawTransPic (54, 32 + m_multiplayer_cursor * 20,Draw_CachePic( va("gui/menudot1.lmp" ) ) ); //GieV: removed rotating menudot
 
-    if (ipxAvailable || tcpipAvailable)
+    if (tcpipAvailable)
         return;
     M_PrintWhite ((320/2) - ((27*8)/2), 148, "No Communications Available");
 }
@@ -1919,6 +1919,7 @@ int	startlevel;
 int maxplayers;
 qboolean m_serverInfoMessage = false;
 double m_serverInfoMessageTime;
+char    selectedMap = 'dm1';
 
 void M_Menu_GameOptions_f (void) {
     IN_Deactivate(modestate == MS_WINDOWED);
@@ -1933,7 +1934,7 @@ void M_Menu_GameOptions_f (void) {
 
 
 int gameoptions_cursor_table[] = {40, 56, 64, 72, 80, 88, 96, 112, 120};
-#define	NUM_GAMEOPTIONS	9
+#define	NUM_GAMEOPTIONS	7
 int		gameoptions_cursor;
 
 void M_GameOptions_Draw (void) {
@@ -2023,7 +2024,7 @@ void M_GameOptions_Draw (void) {
     else
         M_Print (160, 96, va("%i minutes", (int)timelimit.value));
 
-    M_Print (0, 112, "         Episode");
+    /*M_Print (0, 112, "         Episode");
     // MED 01/06/97 added hipnotic episodes
     if (hipnotic)
         M_Print (160, 112, hipnoticepisodes[startepisode].description);
@@ -2046,7 +2047,7 @@ void M_GameOptions_Draw (void) {
     } else {
         M_Print (160, 120, levels[episodes[startepisode].firstLevel + startlevel].description);
         M_Print (160, 128, levels[episodes[startepisode].firstLevel + startlevel].name);
-    }
+    }*/
 
 // line cursor
     M_DrawCharacter (144, gameoptions_cursor_table[gameoptions_cursor], 12+((int)(realtime*4)&1));
@@ -2199,23 +2200,198 @@ void M_GameOptions_Key (int key) {
     case K_ABUTTON:
         S_LocalSound ("misc/menu2.wav");
         if (gameoptions_cursor == 0) {
-            if (sv.active)
+            /*if (sv.active)
                 Cbuf_AddText ("disconnect\n");
             Cbuf_AddText ("listen 0\n");	// so host_netport will be re-examined
             Cbuf_AddText ( va ("maxplayers %u\n", maxplayers) );
             SCR_BeginLoadingPlaque ();
 
-            if (hipnotic)
-                Cbuf_AddText ( va ("map %s\n", hipnoticlevels[hipnoticepisodes[startepisode].firstLevel + startlevel].name) );
-            else if (rogue)
-                Cbuf_AddText ( va ("map %s\n", roguelevels[rogueepisodes[startepisode].firstLevel + startlevel].name) );
-            else
-                Cbuf_AddText ( va ("map %s\n", levels[episodes[startepisode].firstLevel + startlevel].name) );
+            if (selectedMap) {
+                Con_Printf("Selected map: %s\n", selectedMap);
+                Cbuf_AddText ( va ("map %s\n", selectedMap)); //levels[episodes[startepisode].firstLevel + startlevel].name) );
+            } else {
+                Con_Printf("No map selected!");
+            }*/
+
+            M_Menu_MapList_f();
 
             return;
         }
 
         M_NetStart_Change (1);
+        break;
+    }
+}
+
+//=============================================================================
+/* MAPLIST MENU */
+
+#include <dirent.h>
+
+#define MAX_FILE_LIST 15
+
+int initState = 1;
+int numFiles = 0;
+int minFile = 0;
+int maxFile = MAX_FILE_LIST;
+struct dirent **number;
+char filesList[MAX_FILE_LIST][256];
+char fileCount[MAX_FILE_LIST];
+int arrowY = 35;
+int posArrow = 0;
+int numFileList = 0;
+int lastArrowY = 0;
+
+void DeleteArray (char filesList[MAX_FILE_LIST][256], int numFileList) {
+    int i;
+
+    for (i = 0; i < numFileList; i++)
+        strcpy(filesList[i], "0");
+}
+
+void FileNames (char filesList[MAX_FILE_LIST][256], int numFileList) {
+    int y = 35;
+    int i;
+
+    for (i = 0; i < numFileList; i++) {
+        M_Print (74, y, filesList[i]);
+        y += 8;
+    }
+}
+
+int isFile(const struct dirent *number) {
+    int isFile = 0;
+
+    char *extension = strrchr(number->d_name, '.');
+
+    if (strcmp(extension, ".bsp") == 0)
+        isFile = 1;
+
+    return isFile;
+}
+
+void M_Menu_MapList_f (void) {
+    key_dest = key_menu;
+    m_state = m_maplist;
+    m_entersound = true;
+
+    if(initState) {
+        numFiles = scandir(va("%s/maps", GAMENAME), &number, isFile, alphasort);
+
+        if (numFiles < MAX_FILE_LIST) {
+            maxFile = numFiles;
+            numFileList = numFiles;
+        } else
+            numFileList = MAX_FILE_LIST;
+
+        DeleteArray(filesList, numFileList);
+
+        int x = 0;
+        int i;
+
+        for (i = minFile; i < maxFile; i++) {
+            strcpy(filesList[x], number[i]->d_name);
+            x++;
+        }
+
+        initState = 0;
+    }
+}
+
+void M_MapList_Draw (void) {
+    qpic_t   *p;
+    int      x;
+
+    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
+    p = Draw_CachePic ("gui/p_multi.lmp");
+    M_DrawPic ( (320-p->width)/2, 4, p);
+
+    M_DrawTextBox (56, 27, 23, 15);
+    if (!numFileList) {
+        M_PrintWhite (104, 59, "Empty Map list");
+        return;
+    } else
+        FileNames(filesList, numFileList);
+
+    M_DrawCharacter (64, arrowY, 12 + ((int)(realtime * 4) & 1));
+}
+
+void M_MapList_Key (int key) {
+    switch (key) {
+    case K_ESCAPE:
+        M_Menu_GameOptions_f ();
+        break;
+
+    case K_UPARROW:
+        S_LocalSound ("misc/menu1.wav");
+        arrowY -= 8;
+        posArrow--;
+
+        if (posArrow < 0) {
+            if (minFile != 0) {
+                minFile--;
+                maxFile--;
+
+                DeleteArray(filesList, numFileList);
+
+                int x = 0;
+                int i;
+
+                for (i = minFile; i < maxFile; i++) {
+                    strcpy(filesList[x], number[i]->d_name);
+                    x++;
+                }
+            }
+
+            arrowY = 35;
+            posArrow = 0;
+        }
+        break;
+
+    case K_DOWNARROW:
+        S_LocalSound ("misc/menu1.wav");
+        lastArrowY = arrowY;
+        arrowY += 8;
+
+        if (posArrow > numFileList-2) {
+            if(maxFile+1 <= numFiles) {
+                minFile++;
+                maxFile++;
+
+                DeleteArray(filesList, numFileList);
+
+                int x = 0;
+                int i;
+
+                for (i = minFile; i < maxFile; i++) {
+                    strcpy(filesList[x], number[i]->d_name);
+                    x++;
+                }
+            }
+
+            arrowY = lastArrowY;
+        } else
+            posArrow++;
+        break;
+
+    case K_ENTER:
+        S_LocalSound ("misc/menu2.wav");
+        strcpy(fileCount, filesList[posArrow]);
+        COM_StripExtension (fileCount, fileCount, sizeof(fileCount));
+        COM_StripExtension (fileCount, fileCount, sizeof(fileCount));
+        //Cbuf_AddText (va("map %s\n", fileCount));
+        //selectedMap = fileCount;
+        //M_Menu_GameOptions_f();
+
+        S_LocalSound ("misc/menu2.wav");
+        if (sv.active)
+            Cbuf_AddText ("disconnect\n");
+        Cbuf_AddText ("listen 0\n");	// so host_netport will be re-examined
+        Cbuf_AddText ( va ("maxplayers %u\n", maxplayers) );
+        SCR_BeginLoadingPlaque ();
+
+        Cbuf_AddText ( va ("map %s\n", fileCount)); //levels[episodes[startepisode].firstLevel + startlevel].name) );
+
         break;
     }
 }
@@ -2371,6 +2547,7 @@ void M_Init (void) {
     Cmd_AddCommand ("menu_load", M_Menu_Load_f);
     Cmd_AddCommand ("menu_save", M_Menu_Save_f);
     Cmd_AddCommand ("menu_multiplayer", M_Menu_MultiPlayer_f);
+    Cmd_AddCommand ("menu_maplist", M_Menu_MapList_f);
     Cmd_AddCommand ("menu_setup", M_Menu_Setup_f);
     Cmd_AddCommand ("menu_options", M_Menu_Options_f);
     Cmd_AddCommand ("menu_keys", M_Menu_Keys_f);
@@ -2419,6 +2596,10 @@ void M_Draw (void) {
 
     case m_multiplayer:
         M_MultiPlayer_Draw ();
+        break;
+
+    case m_maplist:
+        M_MapList_Draw();
         break;
 
     case m_setup:
@@ -2504,6 +2685,10 @@ void M_Keydown (int key) {
 
     case m_multiplayer:
         M_MultiPlayer_Key (key);
+        return;
+
+    case m_maplist:
+        M_MapList_Key(key);
         return;
 
     case m_setup:
