@@ -325,7 +325,6 @@ void M_SinglePlayer_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/ttl_sgl.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
     M_DrawTransPic (72, 32, Draw_CachePic ("gui/sp_menu.lmp") );
@@ -576,7 +575,6 @@ void M_MultiPlayer_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
     M_DrawTransPic (72, 32, Draw_CachePic ("gui/mp_menu.lmp") );
@@ -633,6 +631,28 @@ void M_MultiPlayer_Key (int key) {
     }
 }
 
+void M_DrawColorBar (int x, int y, int highlight) {
+    int i;
+    int intense = highlight * 16 + (highlight < 8 ? 11 : 4);
+
+    // position correctly
+    x = x + ((vid.width - 320) >> 1);
+
+    for (i = 0; i < 14; i++) {
+        // take the approximate midpoint colour (handle backward ranges)
+        int c = i * 16 + (i < 8 ? 8 : 7);
+
+        // braw baseline colour (offset downwards a little so that it fits correctly
+        Draw_Fill (x + i * 8, y + 4, 8, 8, c, 255);
+    }
+
+    // draw the highlight rectangle
+    Draw_Fill (x - 1 + highlight * 8, y + 3, 10, 10, 15, 255);
+
+    // redraw the highlighted color at brighter intensity
+    Draw_Fill (x + highlight * 8, y + 4, 8, 8, intense, 255);
+}
+
 //=============================================================================
 /* SETUP MENU */
 
@@ -663,23 +683,27 @@ void M_Menu_Setup_f (void) {
 void M_Setup_Draw (void) {
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
-    M_Print (64, 40, "Hostname");
+    M_PrintWhite (64, 40, "Hostname");
     M_DrawTextBox (160, 32, 16, 1);
-    M_Print (168, 40, setup_hostname);
+    M_PrintWhite (168, 40, setup_hostname);
 
-    M_Print (64, 56, "Your name");
+    M_PrintWhite (64, 56, "Your name");
     M_DrawTextBox (160, 48, 16, 1);
-    M_Print (168, 56, setup_myname);
+    M_PrintWhite (168, 56, setup_myname);
 
-    M_Print (64, 80, "Shirt color");
-    M_Print (64, 104, "Pants color");
+    //M_Print (64, 80, "Shirt color");
+    //M_Print (64, 104, "Pants color");
+
+    M_PrintWhite (64, 80, "Shirt color");
+    M_DrawColorBar (0, 88, setup_top);
+    M_PrintWhite (64, 104, "Pants color");
+    M_DrawColorBar (0, 112, setup_bottom);
 
     M_DrawTextBox (64, 140-8, 14, 1);
-    M_Print (72, 140, "Accept Changes");
+    M_PrintWhite (72, 140, "Accept Changes");
 
     p = Draw_CachePic ("gui/bigbox.lmp");
     M_DrawTransPic (160, 64, p);
@@ -845,7 +869,6 @@ void M_Net_Draw (void) {
     int		f;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
@@ -1070,65 +1093,64 @@ void M_DrawCheckbox (int x, int y, int on) {
         M_DrawCharacter (x, y, 129);
 #endif
     if (on)
-        M_Print (x, y, "on");
+        M_PrintWhite (x, y, "on");
     else
-        M_Print (x, y, "off");
+        M_PrintWhite (x, y, "off");
 }
 
 void M_Options_Draw (void) {
     float		r, l;
     qpic_t	*p;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_option.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     // Draw the items in the order of the enum defined above:
     // OPT_CUSTOMIZE:
-    M_Print (16, 32,			"              Controls");
+    M_PrintWhite (16, 32,			"              Controls");
     // OPT_CONSOLE:
-    M_Print (16, 32 + 8*OPT_CONSOLE,	"          Open console");
+    M_PrintWhite (16, 32 + 8*OPT_CONSOLE,	"          Open console");
     // OPT_DEFAULTS:
-    M_Print (16, 32 + 8*OPT_DEFAULTS,	"        Reset settings");
+    M_PrintWhite (16, 32 + 8*OPT_DEFAULTS,	"        Reset settings");
 
     // OPT_SCALE:
-    M_Print (16, 32 + 8*OPT_SCALE,		"             GUI scale");
+    M_PrintWhite (16, 32 + 8*OPT_SCALE,		"             GUI scale");
     l = (vid.width / 320.0) - 1;
     r = l > 0 ? (scr_conscale.value - 1) / l : 0;
     M_DrawSlider (220, 32 + 8*OPT_SCALE, r);
 
     // OPT_SCRSIZE:
-    M_Print (16, 32 + 8*OPT_SCRSIZE,	"           Border size");
+    M_PrintWhite (16, 32 + 8*OPT_SCRSIZE,	"           Border size");
     r = (scr_viewsize.value - 30) / (120 - 30);
     M_DrawSlider (220, 32 + 8*OPT_SCRSIZE, r);
 
     // OPT_GAMMA:
-    M_Print (16, 32 + 8*OPT_GAMMA,		"            Brightness");
+    M_PrintWhite (16, 32 + 8*OPT_GAMMA,		"            Brightness");
     r = (1.0 - vid_gamma.value) / 0.5;
     M_DrawSlider (220, 32 + 8*OPT_GAMMA, r);
 
     // OPT_CONTRAST:
-    M_Print (16, 32 + 8*OPT_CONTRAST,	"              Contrast");
+    M_PrintWhite (16, 32 + 8*OPT_CONTRAST,	"              Contrast");
     r = vid_contrast.value - 1.0;
     M_DrawSlider (220, 32 + 8*OPT_CONTRAST, r);
 
     // OPT_MOUSESPEED:
-    M_Print (16, 32 + 8*OPT_MOUSESPEED,	"     Mouse sensitivity");
+    M_PrintWhite (16, 32 + 8*OPT_MOUSESPEED,	"     Mouse sensitivity");
     r = (sensitivity.value - 1)/10;
     M_DrawSlider (220, 32 + 8*OPT_MOUSESPEED, r);
 
     // OPT_SBALPHA:
-    M_Print (16, 32 + 8*OPT_SBALPHA,	"       Statusbar alpha");
+    M_PrintWhite (16, 32 + 8*OPT_SBALPHA,	"       Statusbar alpha");
     r = (1.0 - scr_sbaralpha.value) ; // scr_sbaralpha range is 1.0 to 0.0
     M_DrawSlider (220, 32 + 8*OPT_SBALPHA, r);
 
     // OPT_SNDVOL:
-    M_Print (16, 32 + 8*OPT_SNDVOL,		"          Sound Volume");
+    M_PrintWhite (16, 32 + 8*OPT_SNDVOL,		"          Sound Volume");
     r = sfxvolume.value;
     M_DrawSlider (220, 32 + 8*OPT_SNDVOL, r);
 
     // OPT_MUSICVOL:
-    M_Print (16, 32 + 8*OPT_MUSICVOL,	"          Music Volume");
+    M_PrintWhite (16, 32 + 8*OPT_MUSICVOL,	"          Music Volume");
     r = bgmvolume.value;
     M_DrawSlider (220, 32 + 8*OPT_MUSICVOL, r);
 
@@ -1137,11 +1159,11 @@ void M_Options_Draw (void) {
     //M_DrawCheckbox (220, 32 + 8*OPT_MUSICEXT, bgm_extmusic.value);
 
     // OPT_ALWAYRUN:
-    M_Print (16, 32 + 8*OPT_ALWAYRUN,	"            Always Run");
+    M_PrintWhite (16, 32 + 8*OPT_ALWAYRUN,	"            Always Run");
     M_DrawCheckbox (220, 32 + 8*OPT_ALWAYRUN, cl_forwardspeed.value > 200);
 
     // OPT_INVMOUSE:
-    M_Print (16, 32 + 8*OPT_INVMOUSE,	"          Invert Mouse");
+    M_PrintWhite (16, 32 + 8*OPT_INVMOUSE,	"          Invert Mouse");
     M_DrawCheckbox (220, 32 + 8*OPT_INVMOUSE, m_pitch.value < 0);
 
     // OPT_ALWAYSMLOOK:
@@ -1158,7 +1180,7 @@ void M_Options_Draw (void) {
 
     // OPT_VIDEO:
     if (vid_menudrawfn)
-        M_Print (16, 32 + 8*OPT_VIDEO,	"         Video Options");
+        M_PrintWhite (16, 32 + 8*OPT_VIDEO,	"         Video Options");
 
 // cursor
     M_DrawCharacter (200, 32 + options_cursor*8, 12+((int)(realtime*4)&1));
@@ -1321,32 +1343,32 @@ void M_Keys_Draw (void) {
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     if (bind_grab)
-        M_Print (12, 32, "Press a key or button for this action");
+        M_PrintWhite (12, 32, "Press a key or button for this action");
     else
-        M_Print (18, 32, "Enter to change, backspace to clear");
+        M_PrintWhite (18, 32, "Enter to change, backspace to clear");
 
 // search for known bindings
     for (i = 0; i < (int)NUMCOMMANDS; i++) {
         y = 48 + 8*i;
 
-        M_Print (16, y, bindnames[i][1]);
+        M_PrintWhite (16, y, bindnames[i][1]);
 
         M_FindKeysForCommand (bindnames[i][0], keys);
 
         if (keys[0] == -1) {
-            M_Print (140, y, "???");
+            M_PrintWhite (140, y, "???");
         } else {
             name = Key_KeynumToString (keys[0]);
-            M_Print (140, y, name);
+            M_PrintWhite (140, y, name);
             x = strlen(name) * 8;
             if (keys[1] != -1) {
                 name = Key_KeynumToString (keys[1]);
-                M_Print (140 + x + 8, y, "or");
-                M_Print (140 + x + 32, y, name);
+                M_PrintWhite (140 + x + 8, y, "or");
+                M_PrintWhite (140 + x + 32, y, name);
                 x = x + 32 + strlen(name) * 8;
                 if (keys[2] != -1) {
-                    M_Print (140 + x + 8, y, "or");
-                    M_Print (140 + x + 32, y, Key_KeynumToString (keys[2]));
+                    M_PrintWhite (140 + x + 8, y, "or");
+                    M_PrintWhite (140 + x + 32, y, Key_KeynumToString (keys[2]));
                 }
             }
         }
@@ -1613,7 +1635,6 @@ void M_LanConfig_Draw (void) {
     const char	*startJoin;
     const char	*protocol;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
     p = Draw_CachePic ("gui/p_multi.lmp");
     basex = (320-p->width)/2;
     M_DrawPic (basex, 4, p);
@@ -1626,27 +1647,27 @@ void M_LanConfig_Draw (void) {
         protocol = "IPX";
     else*/
         protocol = "TCP/IP";
-    M_Print (basex, 32, va ("%s - %s", startJoin, protocol));
+    M_PrintWhite (basex, 32, va ("%s - %s", startJoin, protocol));
     basex += 8;
 
-    M_Print (basex, 52, "Address:");
+    M_PrintWhite (basex, 52, "Address:");
     if (IPXConfig)
-        M_Print (basex+9*8, 52, my_ipx_address);
+        M_PrintWhite (basex+9*8, 52, my_ipx_address);
     else
-        M_Print (basex+9*8, 52, my_tcpip_address);
+        M_PrintWhite (basex+9*8, 52, my_tcpip_address);
 
-    M_Print (basex, lanConfig_cursor_table[0], "Port");
+    M_PrintWhite (basex, lanConfig_cursor_table[0], "Port");
     M_DrawTextBox (basex+8*8, lanConfig_cursor_table[0]-8, 6, 1);
-    M_Print (basex+9*8, lanConfig_cursor_table[0], lanConfig_portname);
+    M_PrintWhite (basex+9*8, lanConfig_cursor_table[0], lanConfig_portname);
 
     if (JoiningGame) {
-        M_Print (basex, lanConfig_cursor_table[1], "Search for local games...");
-        M_Print (basex, 108, "Join game at:");
+        M_PrintWhite (basex, lanConfig_cursor_table[1], "Search for local games...");
+        M_PrintWhite (basex, 108, "Join game at:");
         M_DrawTextBox (basex+8, lanConfig_cursor_table[2]-8, 22, 1);
-        M_Print (basex+16, lanConfig_cursor_table[2], lanConfig_joinname);
+        M_PrintWhite (basex+16, lanConfig_cursor_table[2], lanConfig_joinname);
     } else {
         M_DrawTextBox (basex, lanConfig_cursor_table[1]-8, 2, 1);
-        M_Print (basex+8, lanConfig_cursor_table[1], "OK");
+        M_PrintWhite (basex+8, lanConfig_cursor_table[1], "OK");
     }
 
     M_DrawCharacter (basex-8, lanConfig_cursor_table [lanConfig_cursor], 12+((int)(realtime*4)&1));
@@ -1941,23 +1962,24 @@ void M_GameOptions_Draw (void) {
     qpic_t	*p;
     int		x;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
+    //M_DrawTextBox (10, -10, 35, 15);
+
     p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     M_DrawTextBox (152, 32, 10, 1);
-    M_Print (160, 40, "begin game");
+    M_PrintWhite (160, 40, "begin game");
 
-    M_Print (0, 56, "      Max players");
-    M_Print (160, 56, va("%i", maxplayers) );
+    M_PrintWhite (0, 56, "      Max players");
+    M_PrintWhite (160, 56, va("%i", maxplayers) );
 
-    M_Print (0, 64, "        Game Type");
+    M_PrintWhite (0, 64, "        Game Type");
     if (coop.value)
-        M_Print (160, 64, "Cooperative");
+        M_PrintWhite (160, 64, "Cooperative");
     else
-        M_Print (160, 64, "Deathmatch");
+        M_PrintWhite (160, 64, "Deathmatch");
 
-    M_Print (0, 72, "        Teamplay");
+    M_PrintWhite (0, 72, "        Teamplay");
     if (rogue) {
         const char *msg;
 
@@ -1984,7 +2006,7 @@ void M_GameOptions_Draw (void) {
             msg = "Off";
             break;
         }
-        M_Print (160, 72, msg);
+        M_PrintWhite (160, 72, msg);
     } else {
         const char *msg;
 
@@ -1999,30 +2021,30 @@ void M_GameOptions_Draw (void) {
             msg = "Off";
             break;
         }
-        M_Print (160, 72, msg);
+        M_PrintWhite (160, 72, msg);
     }
 
-    M_Print (0, 80, "            Skill");
+    M_PrintWhite (0, 80, "            Skill");
     if (skill.value == 0)
-        M_Print (160, 80, "Easy difficulty");
+        M_PrintWhite (160, 80, "Easy difficulty");
     else if (skill.value == 1)
-        M_Print (160, 80, "Normal difficulty");
+        M_PrintWhite (160, 80, "Normal difficulty");
     else if (skill.value == 2)
         M_Print (160, 80, "Hard difficulty");
     else
         M_Print (160, 80, "Nightmare difficulty");
 
-    M_Print (0, 88, "       Frag Limit");
+    M_PrintWhite (0, 88, "       Frag Limit");
     if (fraglimit.value == 0)
-        M_Print (160, 88, "none");
+        M_PrintWhite (160, 88, "none");
     else
-        M_Print (160, 88, va("%i frags", (int)fraglimit.value));
+        M_PrintWhite (160, 88, va("%i frags", (int)fraglimit.value));
 
-    M_Print (0, 96, "       Time Limit");
+    M_PrintWhite (0, 96, "       Time Limit");
     if (timelimit.value == 0)
-        M_Print (160, 96, "none");
+        M_PrintWhite (160, 96, "none");
     else
-        M_Print (160, 96, va("%i minutes", (int)timelimit.value));
+        M_PrintWhite (160, 96, va("%i minutes", (int)timelimit.value));
 
     /*M_Print (0, 112, "         Episode");
     // MED 01/06/97 added hipnotic episodes
@@ -2057,10 +2079,10 @@ void M_GameOptions_Draw (void) {
             x = (320-26*8)/2;
             M_DrawTextBox (x, 138, 24, 4);
             x += 8;
-            M_Print (x, 146, "  More than 4 players   ");
-            M_Print (x, 154, " requires using command ");
-            M_Print (x, 162, "line parameters; please ");
-            M_Print (x, 170, "   see techinfo.txt.    ");
+            M_PrintWhite (x, 146, "  More than 4 players   ");
+            M_PrintWhite (x, 154, " requires using command ");
+            M_PrintWhite (x, 162, "line parameters; please ");
+            M_PrintWhite (x, 170, "   see techinfo.txt.    ");
         } else {
             m_serverInfoMessage = false;
         }
@@ -2302,8 +2324,7 @@ void M_MapList_Draw (void) {
     qpic_t   *p;
     int      x;
 
-    M_DrawTransPic (16, 4, Draw_CachePic ("gui/logo.lmp") );
-    p = Draw_CachePic ("gui/p_multi.lmp");
+    p = Draw_CachePic ("gui/p_multi.lmp"); //TODO: Replace this with it's own header, possibly.
     M_DrawPic ( (320-p->width)/2, 4, p);
 
     M_DrawTextBox (56, 27, 23, 15);
@@ -2481,7 +2502,7 @@ void M_ServerList_Draw (void) {
     p = Draw_CachePic ("gui/p_multi.lmp");
     M_DrawPic ( (320-p->width)/2, 4, p);
     for (n = 0; n < hostCacheCount; n++)
-        M_Print (16, 32 + 8*n, NET_SlistPrintServer (n));
+        M_PrintWhite (16, 32 + 8*n, NET_SlistPrintServer (n));
     M_DrawCharacter (0, 32 + slist_cursor*8, 12+((int)(realtime*4)&1));
 
     if (*m_return_reason)

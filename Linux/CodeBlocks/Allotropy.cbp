@@ -15,6 +15,7 @@
 				<Option parameters="-window -sndspeed 48000" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="Engine" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -25,6 +26,7 @@
 				<Option parameters="-window -sndspeed 48000" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="Engine" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -140,6 +142,10 @@
 		<Unit filename="../../Engine/gl_vidsdl.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="../../Engine/gl_vmdl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../Engine/gl_vmdl.h" />
 		<Unit filename="../../Engine/gl_warp.c">
 			<Option compilerVar="CC" />
 		</Unit>

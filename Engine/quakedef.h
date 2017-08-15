@@ -39,11 +39,12 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #define	FITZQUAKE_VERSION	0.85	//johnfitz
 #define	QUAKESPASM_VERSION	0.92
 #define	QUAKESPASM_VER_PATCH	1	// helper to print a string like 0.92.1
-#define DARWIN_VERSION 0.18         //GieV: <release>.<version, increases for every new feature>.<patch number>
+#define DARWIN_VERSION 0.19         //GieV: <release>.<version, increases for every new feature>.<patch number>
 #define DARWIN_VERSION_PATCH 0
 
 //define	PARANOID			// speed sapping error checking
 #define SUBST_MISSING_MODELS    1   //GieV: If enabled, will use a fallback mdl so the game doesn't crash if a model is missing.
+#define VMODELS_ENABLED         1   //GieV: If enabled, will allow the usage of VMDLs.
 
 #define	GAMENAME	"lbb"		// directory to look in by default
 

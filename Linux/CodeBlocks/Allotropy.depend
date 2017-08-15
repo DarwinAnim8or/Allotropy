@@ -1869,7 +1869,7 @@
 	"snd_codec.h"
 	"bgmusic.h"
 
-1501946103 /home/darwin/Projects/Allotropy/Engine/quakedef.h
+1502825255 /home/darwin/Projects/Allotropy/Engine/quakedef.h
 	"q_stdinc.h"
 	"common.h"
 	"bspfile.h"
@@ -1933,7 +1933,7 @@
 
 1500486507 /home/darwin/Projects/Allotropy/Engine/zone.h
 
-1500486507 /home/darwin/Projects/Allotropy/Engine/mathlib.h
+1502824777 /home/darwin/Projects/Allotropy/Engine/mathlib.h
 	<math.h>
 
 1500486505 /home/darwin/Projects/Allotropy/Engine/cvar.h
@@ -1981,7 +1981,7 @@
 
 1500486506 /home/darwin/Projects/Allotropy/Engine/client.h
 
-1501894889 /home/darwin/Projects/Allotropy/Engine/gl_model.h
+1502550770 /home/darwin/Projects/Allotropy/Engine/gl_model.h
 	"modelgen.h"
 	"spritegn.h"
 
@@ -2022,7 +2022,7 @@
 
 1500486506 /home/darwin/Projects/Allotropy/Engine/cdaudio.h
 
-1500486505 /home/darwin/Projects/Allotropy/Engine/glquake.h
+1502825995 /home/darwin/Projects/Allotropy/Engine/glquake.h
 
 1499773300 /home/darwin/Projects/Allotropy/Engine/snd_codec.h
 
@@ -2096,7 +2096,7 @@
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_mesh.c
 	"quakedef.h"
 
-1501932523 source:/home/darwin/Projects/Allotropy/Engine/gl_model.c
+1502550610 source:/home/darwin/Projects/Allotropy/Engine/gl_model.c
 	"quakedef.h"
 
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/gl_refrag.c
@@ -2120,7 +2120,7 @@
 1501889171 source:/home/darwin/Projects/Allotropy/Engine/gl_texmgr.c
 	"quakedef.h"
 
-1501889487 source:/home/darwin/Projects/Allotropy/Engine/gl_vidsdl.c
+1502229773 source:/home/darwin/Projects/Allotropy/Engine/gl_vidsdl.c
 	"quakedef.h"
 	"cfgfile.h"
 	"bgmusic.h"
@@ -2175,10 +2175,10 @@
 	"SDL.h"
 	<stdio.h>
 
-1501874311 source:/home/darwin/Projects/Allotropy/Engine/mathlib.c
+1502825298 source:/home/darwin/Projects/Allotropy/Engine/mathlib.c
 	"quakedef.h"
 
-1501962793 source:/home/darwin/Projects/Allotropy/Engine/menu.c
+1502043570 source:/home/darwin/Projects/Allotropy/Engine/menu.c
 	"quakedef.h"
 	"bgmusic.h"
 	<dirent.h>
@@ -2448,7 +2448,7 @@
 	<sys/sysctl.h>
 	<sys/mpctl.h>
 
-1501705675 source:/home/darwin/Projects/Allotropy/Engine/view.c
+1502825222 source:/home/darwin/Projects/Allotropy/Engine/view.c
 	"quakedef.h"
 
 1501871066 source:/home/darwin/Projects/Allotropy/Engine/wad.c
@@ -2459,4 +2459,11 @@
 
 1500486506 source:/home/darwin/Projects/Allotropy/Engine/zone.c
 	"quakedef.h"
+
+1502745833 source:/home/darwin/Projects/Allotropy/Engine/gl_vmdl.c
+	"quakedef.h"
+	"glquake.h"
+	"gl_vmdl.h"
+
+1502229994 /home/darwin/Projects/Allotropy/Engine/gl_vmdl.h
 

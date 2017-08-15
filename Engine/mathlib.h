@@ -61,6 +61,9 @@ static inline int IS_NAN (float x) {
 #define VectorAdd(a,b,c) {c[0]=a[0]+b[0];c[1]=a[1]+b[1];c[2]=a[2]+b[2];}
 #define VectorCopy(a,b) {b[0]=a[0];b[1]=a[1];b[2]=a[2];}
 
+typedef float matrix3x4[3][4];
+typedef float matrix3x3[3][3];
+
 //johnfitz -- courtesy of lordhavoc
 // QuakeSpasm: To avoid strict aliasing violations, use a float/int union instead of type punning.
 #define VectorNormalizeFast(_v)\
@@ -104,6 +107,7 @@ int GreatestCommonDivisor (int i1, int i2);
 void AngleVectors (vec3_t angles, vec3_t forward, vec3_t right, vec3_t up);
 int BoxOnPlaneSide (vec3_t emins, vec3_t emaxs, struct mplane_s *plane);
 float	anglemod(float a);
+int ParseFloats(char *s, float *f, int *f_size);
 
 
 #define BOX_ON_PLANE_SIDE(emins, emaxs, p)	\

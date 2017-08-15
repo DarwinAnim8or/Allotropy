@@ -387,7 +387,7 @@ qboolean Mod_CheckFullbrights (byte *pixels, int count) {
 Mod_LoadTextures
 =================
 */
-qboolean hl_map;
+qboolean hl_map = false;
 void Mod_LoadTextures (lump_t *l) {
     int		i, j, pixels, num, maxanim, altmax;
     miptex_t	*mt;
@@ -2385,7 +2385,7 @@ void Mod_LoadAliasModel (qmodel_t *mod, void *buffer) {
         Sys_Error ("model %s has no vertices", mod->name);
 
     if (pheader->numverts > MAXALIASVERTS)
-        Sys_Error ("model %s has too many vertices", mod->name);
+        Sys_Error ("model %s has too many vertices ( > %i)", mod->name, MAXALIASVERTS);
 
     pheader->numtris = LittleLong (pinmodel->numtris);
 

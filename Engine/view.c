@@ -60,6 +60,7 @@ cvar_t	v_idlescale = {"v_idlescale", "0", CVAR_NONE};
 
 cvar_t	crosshair = {"crosshair", "0", CVAR_ARCHIVE};
 cvar_t  crosshaircolor = {"crosshaircolor", "79", CVAR_ARCHIVE};
+cvar_t  r_viewmodeloffset = {"r_viewmodeloffset", "0", CVAR_ARCHIVE};
 
 cvar_t	gl_cshiftpercent = {"gl_cshiftpercent", "100", CVAR_NONE};
 
@@ -729,9 +730,26 @@ void V_CalcRefdef (void) {
     VectorCopy (ent->origin, view->origin);
     view->origin[2] += cl.viewheight;
 
+    #if 0
     for (i=0 ; i<3 ; i++)
         view->origin[i] += forward[i]*bob*0.4;
     view->origin[2] += bob;
+    #endif
+
+    #if 1
+    VectorCopy (r_refdef.vieworg, view->origin);
+    VectorMA (view->origin, bob * 0.4, forward, view->origin);
+
+    if (r_viewmodeloffset.string[0]) {
+        float offset[3];
+        int size = sizeof(offset)/sizeof(offset[0]);
+
+        ParseFloats(r_viewmodeloffset.string, offset, &size);
+        VectorMA (view->origin,  offset[0], right,   view->origin);
+        VectorMA (view->origin, -offset[1], up,      view->origin);
+        VectorMA (view->origin,  offset[2], forward, view->origin);
+    }
+    #endif
 
     //johnfitz -- removed all gun position fudging code (was used to keep gun from getting covered by sbar)
 
@@ -840,6 +858,7 @@ void V_Init (void) {
     Cvar_RegisterVariable (&v_idlescale);
     Cvar_RegisterVariable (&crosshair);
     Cvar_RegisterVariable (&gl_cshiftpercent);
+    Cvar_RegisterVariable (&r_viewmodeloffset);
 
     Cvar_RegisterVariable (&scr_ofsx);
     Cvar_RegisterVariable (&scr_ofsy);

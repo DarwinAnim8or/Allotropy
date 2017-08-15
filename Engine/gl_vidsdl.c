@@ -1909,11 +1909,6 @@ static void VID_MenuDraw (void) {
     const char *title;
 
     y = 4;
-
-    // plaque
-    p = Draw_CachePic ("gui/logo.lmp");
-    M_DrawTransPic (16, y, p);
-
     //p = Draw_CachePic ("gui/vidmodes.lmp");
     p = Draw_CachePic ("gui/p_option.lmp");
     M_DrawPic ( (320-p->width)/2, y, p);
@@ -1930,19 +1925,19 @@ static void VID_MenuDraw (void) {
     for (i = 0; i < VIDEO_OPTIONS_ITEMS; i++) {
         switch (i) {
         case VID_OPT_MODE:
-            M_Print (16, y, "        Video mode");
-            M_Print (184, y, va("%ix%i", (int)vid_width.value, (int)vid_height.value));
+            M_PrintWhite (16, y, "        Video mode");
+            M_PrintWhite (184, y, va("%ix%i", (int)vid_width.value, (int)vid_height.value));
             break;
         case VID_OPT_BPP:
-            M_Print (16, y, "       Color depth");
-            M_Print (184, y, va("%i", (int)vid_bpp.value));
+            M_PrintWhite (16, y, "       Color depth");
+            M_PrintWhite (184, y, va("%i", (int)vid_bpp.value));
             break;
         case VID_OPT_FULLSCREEN:
-            M_Print (16, y, "        Fullscreen");
+            M_PrintWhite (16, y, "        Fullscreen");
             M_DrawCheckbox (184, y, (int)vid_fullscreen.value);
             break;
         case VID_OPT_VSYNC:
-            M_Print (16, y, "     Vertical sync");
+            M_PrintWhite (16, y, "     Vertical sync");
             if (gl_swap_control)
                 M_DrawCheckbox (184, y, (int)vid_vsync.value);
             else
@@ -1950,10 +1945,10 @@ static void VID_MenuDraw (void) {
             break;
         case VID_OPT_TEST:
             y += 8; //separate the test and apply items
-            M_Print (16, y, "      Test changes");
+            M_PrintWhite (16, y, "      Test changes");
             break;
         case VID_OPT_APPLY:
-            M_Print (16, y, "     Apply changes");
+            M_PrintWhite (16, y, "     Apply changes");
             break;
         }
 

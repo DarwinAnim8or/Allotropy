@@ -370,7 +370,7 @@ extern	trivertx_t	*poseverts[MAXALIASFRAMES];
 // Whole model
 //
 
-typedef enum {mod_brush, mod_sprite, mod_alias} modtype_t;
+typedef enum {mod_brush, mod_sprite, mod_alias, mod_vmdl} modtype_t;
 
 #define	EF_ROCKET	1			// leave a trail
 #define	EF_GRENADE	2			// leave a trail
@@ -386,6 +386,17 @@ typedef enum {mod_brush, mod_sprite, mod_alias} modtype_t;
 #define	MOD_NOSHADOW	512		//don't cast a shadow
 #define	MOD_FBRIGHTHACK	1024	//when fullbrights are disabled, use a hack to render this model brighter
 //johnfitz
+
+//GieV: used by vmdl
+#define MDLF_ENGULPHS        0x001 // particle effect engulphs model (don't draw)
+#define MDLF_NODEFAULTTRAIL  0x002
+#define MDLF_RGBLIGHTING     0x004
+#define MDLF_PLAYER          0x008 // players have specific lighting values
+#define MDLF_FLAME           0x010 // can be excluded with r_drawflame, fullbright render hack
+#define MDLF_DOCRC           0x020 // model needs CRC built
+#define MDLF_NEEDOVERBRIGHT  0x040 // only overbright these models with gl_overbright_all set
+#define MDLF_BOLT            0x080 // doesn't produce shadows
+#define	MDLF_NOTREPLACEMENTS 0x100 // can be considered a cheat, disable texture replacements
 
 typedef struct qmodel_s {
     char		name[MAX_QPATH];

@@ -668,7 +668,7 @@ void R_DrawViewModel (void) {
     // hack the depth range to prevent view model from poking into walls
     glDepthRange (0, 0.3);
     glTranslatef(0.5f, 0.0f, 0.0f); //GieV: adds a little bit of extra movement when looking around.
-    R_DrawAliasModel (currententity, 0.0f, -4.0f, 1.5f);
+    R_DrawAliasModel (currententity, 0.0f, 0.0f, 1.5f);
     glTranslatef(0.0f, 0.0f, 0.0f); //GieV: just to be safe, set it back to normal.
     glDepthRange (0, 1);
 }

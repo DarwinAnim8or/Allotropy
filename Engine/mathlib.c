@@ -482,3 +482,27 @@ fixed16_t Invert24To16(fixed16_t val) {
 	for (out = 1; out < _mathlib_temp_int1; out <<= 1)	\
 	;												\
 }
+
+int ParseFloats(char *s, float* f, int* f_size) {
+    int i, argc;
+
+    if (!s || !f || !f_size)
+        Sys_Error("ParseFloats(): wrong params");
+
+    if (f_size[0] <= 0) {
+        return (f_size[0] = 0); //array has no size, unusual but no crime
+    }
+
+    Cmd_TokenizeString(s);
+    argc = MIN(Cmd_Argc(), f_size[0]);
+
+    for (i = 0; i < argc; i++) {
+        f[i] = Q_atof(Cmd_Argv(i));
+    }
+
+    for (; i < f_size[0]; i++) {
+        f[i] = 0; //Sets unused elements to zero
+    }
+
+    return (f_size[0] = argc);
+}
