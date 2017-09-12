@@ -2,119 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="../../Engine/mathlib.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../../Engine/net_main.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2009" topLine="48" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/r_part.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="17553" topLine="654" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/anorm_dots.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="215" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/mathlib.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="12733" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/sv_main.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2452" topLine="85" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_model.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1890" topLine="40" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/view.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="19897" topLine="725" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/arch_def.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1950" topLine="72" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/host_cmd.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="12207" topLine="361" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/sv_phys.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1960" topLine="36" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_vmdl.c" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="7214" topLine="203" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_texmgr.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="29886" topLine="1166" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/menu.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="66509" topLine="2560" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/client.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4748" topLine="151" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/common.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="9633" topLine="247" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/sv_user.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="11378" topLine="436" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/q_stdinc.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1822" topLine="174" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_vidsdl.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="59531" topLine="1871" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_draw.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="21066" topLine="815" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/sys_sdl_unix.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="8350" topLine="324" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/quakedef.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1766" topLine="29" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/keys.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3711" topLine="178" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/menu.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1092" topLine="24" />
+			<Cursor1 position="16678" topLine="683" />
 		</Cursor>
 	</File>
 	<File name="../../Engine/cl_main.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -122,9 +12,9 @@
 			<Cursor1 position="20190" topLine="711" />
 		</Cursor>
 	</File>
-	<File name="../../Engine/r_alias.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../../Engine/cl_input.c" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="33498" topLine="813" />
+			<Cursor1 position="3653" topLine="107" />
 		</Cursor>
 	</File>
 	<File name="../../Engine/pr_cmds.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -132,179 +22,14 @@
 			<Cursor1 position="4731" topLine="171" />
 		</Cursor>
 	</File>
-	<File name="../../Engine/progdefs.q1" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../../Engine/q_stdinc.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1841" topLine="42" />
+			<Cursor1 position="1822" topLine="174" />
 		</Cursor>
 	</File>
-	<File name="../../Engine/bgmusic.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../../Engine/gl_texmgr.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="511" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/common.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="30084" topLine="1308" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/chase.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3287" topLine="93" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/sbar.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="14915" topLine="516" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/pr_edict.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="23939" topLine="977" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/server.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4055" topLine="109" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/draw.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1605" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/console.c" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="30189" topLine="1127" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/net_main.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="16678" topLine="683" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_screen.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="25438" topLine="991" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_rmain.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="19978" topLine="612" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/cvar.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="11348" topLine="481" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/host.c" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="22300" topLine="811" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/cl_input.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2579" topLine="61" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/bspfile.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5640" topLine="201" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/cl_demo.c" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="9577" topLine="397" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/cmd.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1383" topLine="38" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_sky.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5021" topLine="167" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_vmdl.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4672" topLine="170" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/crc.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3710" topLine="56" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/strl_fn.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="174" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/progs.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="888" topLine="61" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_mesh.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="497" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/cd_sdl.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="9007" topLine="328" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/zone.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="11654" topLine="430" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/snd_opus.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2164" topLine="68" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/world.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4576" topLine="137" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_model.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="12945" topLine="480" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/resource.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="143" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/cl_tent.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6810" topLine="193" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/gl_texmgr.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1194" topLine="29" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/glquake.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="11735" topLine="314" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/cl_parse.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="10974" topLine="340" />
-		</Cursor>
-	</File>
-	<File name="../../Engine/snd_codec.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6713" topLine="252" />
+			<Cursor1 position="29886" topLine="1166" />
 		</Cursor>
 	</File>
 	<File name="../../Engine/cmd.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -312,19 +37,74 @@
 			<Cursor1 position="15365" topLine="658" />
 		</Cursor>
 	</File>
-	<File name="../../Engine/main_sdl.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../../Engine/gl_draw.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4159" topLine="122" />
+			<Cursor1 position="20649" topLine="697" />
 		</Cursor>
 	</File>
-	<File name="../../Engine/gl_rlight.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../../Engine/anorm_dots.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="6059" topLine="211" />
+			<Cursor1 position="215" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="../../Engine/wad.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../../Engine/view.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="7352" topLine="247" />
+			<Cursor1 position="23578" topLine="828" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/common.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9633" topLine="247" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_refrag.c" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/host.c" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="22300" topLine="811" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/mathlib.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="13303" topLine="472" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/cl_demo.c" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9577" topLine="397" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_sky.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5021" topLine="167" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/crc.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3710" topLine="56" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/chase.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3287" topLine="93" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_vidsdl.c" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10452" topLine="297" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_screen.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="25438" topLine="991" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/progdefs.q1" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1841" topLine="42" />
 		</Cursor>
 	</File>
 	<File name="../../Engine/wad.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -332,14 +112,234 @@
 			<Cursor1 position="2233" topLine="52" />
 		</Cursor>
 	</File>
+	<File name="../../Engine/sys_sdl_unix.c" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2688" topLine="107" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/main_sdl.c" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4238" topLine="122" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/wad.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7352" topLine="247" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/bgmusic.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="511" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/zone.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11654" topLine="430" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/cvar.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11348" topLine="481" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/sv_phys.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1960" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/sv_main.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6415" topLine="350" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/mathlib.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3705" topLine="96" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_model.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7067" topLine="283" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/cmd.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1383" topLine="38" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/sbar.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14915" topLine="516" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_texmgr.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1194" topLine="29" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/keys.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3711" topLine="178" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/strl_fn.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="174" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/world.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4576" topLine="137" />
+		</Cursor>
+	</File>
 	<File name="../../Engine/r_brush.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="../../Engine/bspfile.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3138" topLine="99" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_fog.c" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="957" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_rlight.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6059" topLine="211" />
+		</Cursor>
+	</File>
 	<File name="../../Engine/image.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="10012" topLine="239" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/sv_user.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11378" topLine="436" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/client.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4748" topLine="151" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/snd_codec.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6713" topLine="252" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/r_alias.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="33498" topLine="813" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_mesh.c" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8222" topLine="296" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/progs.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="888" topLine="61" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/arch_def.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1950" topLine="72" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/glquake.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12207" topLine="328" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/quakedef.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1719" topLine="26" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/cd_sdl.c" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2811" topLine="103" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/cl_tent.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6810" topLine="193" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/server.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4055" topLine="109" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/pr_edict.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="23939" topLine="977" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_rmain.c" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="21029" topLine="660" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/draw.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1605" topLine="28" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/snd_opus.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2164" topLine="68" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/console.c" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="30158" topLine="1127" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/resource.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="143" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/menu.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="41045" topLine="1574" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/menu.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1092" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/host_cmd.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12207" topLine="361" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/common.c" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="37860" topLine="1595" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/r_part.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="17553" topLine="654" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/cl_parse.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10974" topLine="340" />
+		</Cursor>
+	</File>
+	<File name="../../Engine/gl_model.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12945" topLine="471" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

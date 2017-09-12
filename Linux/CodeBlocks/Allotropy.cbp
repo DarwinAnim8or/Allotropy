@@ -142,10 +142,6 @@
 		<Unit filename="../../Engine/gl_vidsdl.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../../Engine/gl_vmdl.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../../Engine/gl_vmdl.h" />
 		<Unit filename="../../Engine/gl_warp.c">
 			<Option compilerVar="CC" />
 		</Unit>

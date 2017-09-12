@@ -154,7 +154,7 @@ qboolean Mod_LoadVMDL(qmodel_t *mod, void *buffer) {
     texNums = Hunk_Alloc(texHeader->numTextures*sizeof(model->texNums));
     model->texNums = (char *)texNums - (char *)model;
     for (i = 0; i < texHeader->numTextures; i++) {
-        texNums[i].gltexture->texnum = GL_LoadTexture32("", tex[i].width, tex[i].height, (byte *) texHeader + tex[i].offset, (byte *) texHeader + tex[i].width * tex[i].height + tex[i].offset, TEXPREF_NONE);
+    //    texNums[i].gltexture->texnum = GL_LoadTexture32("", tex[i].width, tex[i].height, (byte *) texHeader + tex[i].offset, (byte *) texHeader + tex[i].width * tex[i].height + tex[i].offset, TEXPREF_NONE);
     }
 
     end = Hunk_LowMark();

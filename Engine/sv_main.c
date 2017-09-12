@@ -205,7 +205,7 @@ void SV_StartSound (edict_t *entity, int channel, const char *sample, int volume
     }
 
     if (sound_num == MAX_SOUNDS || !sv.sound_precache[sound_num]) {
-        Con_Printf ("SV_StartSound: %s not precacheed\n", sample);
+        Con_Printf ("SV_StartSound: %s not precached\n", sample);
         return;
     }
 
